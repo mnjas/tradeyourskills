@@ -1,0 +1,61 @@
+// Responsive
+$mobileSBreakpoint: 320px;
+$mobileBreakpoint: 767px;
+$tabletBreakpoint: 996px;
+$laptopBreakpoint: 1023px;
+$desktopXLBreakpoint: 1200px;
+$desktopXXLBreakpoint: 1380px;
+
+// Sizes
+$blockSize: 1276px;
+$blockPadding: 1.5em;
+$blockMarginBottom: 5rem;
+
+// Colors
+$white: #fff;
+$black: #000;
+
+// Fonts
+$bold: 700;
+
+@mixin button {
+	display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  padding: 0 30px;
+  background: linear-gradient(270deg,#000 50%,#5e5e5e 0);
+  background-size: 200% 100%;
+  background-position: 100% 100%;
+  border: none!important;
+  height: 44px!important;
+  margin-bottom: 20px;
+  cursor: pointer;
+  &:hover {
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    background-position: 0 100%;
+  }
+
+	@media (min-width: 991px) {
+			transition: background .5s cubic-bezier(.215,.61,.355,1);
+			display: flex;
+			min-width: 197px;
+	}
+}
+
+
+// Export
+:export {
+	mobileBreakpoint: $mobileBreakpoint;
+	mobileSBreakpoint: $mobileSBreakpoint;
+	tabletBreakpoint: $tabletBreakpoint;
+	laptopBreakpoint: $laptopBreakpoint;
+	desktopXLBreakpoint: $desktopXLBreakpoint;
+	desktopXXLBreakpoint: $desktopXXLBreakpoint;
+}

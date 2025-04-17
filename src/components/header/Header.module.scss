@@ -1,0 +1,259 @@
+@use "@/config/media.scss" as *;
+
+.headerWrapper {
+  position: relative;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000000;
+  background-color: #F8F4EF;
+  // background-color: rgba(255, 255, 255, .9);
+  font-family: BigJohn, Arial;
+  font-weight: 900;
+  padding-bottom: 0;
+  padding-top: 60px;
+  height: 100px;
+
+  transition: padding-top 1s ease, font-size 1s ease, height 1s ease, padding-bottom 1s ease;
+
+  &.scrolled {
+    padding-top: 10px;
+    padding-bottom: 40px;
+    height: 0;
+
+    .logo img {
+      height: 32px;
+
+      @include mobile {
+        height: 20px;
+      }
+    }
+
+    @include mobile {
+      padding-bottom: 30px;
+    }
+  }
+
+  @include mobile {
+    padding-top: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 0;
+    padding-bottom: 10px;
+    height: 30px;
+  }
+}
+
+.headerSpacer {
+  height: 200px;
+
+  @include mobile {
+    height: 100px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 25px;
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.logo {
+  p {
+    display: flex;
+    align-items: baseline;
+    margin: 0;
+    font-weight: bold;
+
+    img {
+      display: block;
+      height: 75px;
+      width: auto;
+      transition: height 1s ease;
+
+      @include tablet {
+        height: 40px;
+      }
+
+      @include mobile {
+        height: 25px;
+      }
+    }
+
+    @include mobile {
+      font-size: 24px;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+
+  a,
+  span {
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+    font-weight: 700;
+    position: relative;
+    margin-left: 30px;
+    letter-spacing: -1px;
+
+    &:hover {
+      color: #0041C2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: -15px;
+      top: -2px;
+      background-color: lightgray;
+      width: 2px;
+      height: 20px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    &:last-child::after {
+      content: none;
+    }
+  }
+
+  span {
+    color: #0041C2;
+  }
+
+  &.open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 50px;
+    gap: 20px;
+    z-index: 999;
+
+    a,
+    span {
+      font-size: 1.5rem;
+    }
+  }
+
+  @include mobile {
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+
+    a,
+    span {
+      margin-right: 20px;
+    }
+  }
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+  // justify-content: right;
+}
+
+.authButton {
+  padding: 5px 10px;
+  background-color: #0041C2;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: #002f91;
+  }
+}
+
+.authButtonSecondary {
+  @extend .authButton;
+  background-color: #fff;
+  color: #0041C2;
+  border: 1px solid #0041C2;
+
+  &:hover {
+    background-color: #f0f0f0;
+  }
+}
+
+
+.burgerButton {
+  display: none;
+  position: relative;
+  width: 40px;
+  color: #080808;
+  font-size: 3em;
+  height: 25px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10000;
+
+  span {
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: black;
+    transition: all 0.3s;
+  }
+
+  &.open {
+    span:nth-child(1) {
+      transform: translateY(10px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-10px) rotate(-45deg);
+    }
+  }
+
+  @include mobile {
+    display: flex;
+    margin-right: 24px;
+  }
+}
+
+@include mobile {
+  .nav {
+    display: none;
+
+    &.open {
+      display: flex;
+    }
+  }
+}

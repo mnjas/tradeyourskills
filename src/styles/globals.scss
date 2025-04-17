@@ -1,0 +1,35 @@
+@import '@styles/reset.css';
+@import '@styles/styles.module.scss';
+
+body {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: left;
+  font-family: var(--font-barlow);
+	&.overflow_hidden {
+		overflow: hidden;
+	}
+}
+
+input, select {
+  font-family: var(--font-roboto);
+}
+
+img, svg {
+  vertical-align: middle;
+}
+
+svg {
+  overflow: hidden;
+}
+
+strong {
+	font-weight: $bold;
+}
+
+a {
+  color: #000;
+  font-weight: 600;
+}

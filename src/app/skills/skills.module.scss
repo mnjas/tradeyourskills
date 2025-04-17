@@ -1,0 +1,19 @@
+@use "@/config/media.scss" as *;
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  text-align: left;
+  font-family: Lato, sans-serif;
+
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+
+

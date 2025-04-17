@@ -1,0 +1,34 @@
+@use "@/config/media.scss" as *;
+
+.banner {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+
+  @include mobile {
+    height: 120px;
+  }
+}
+
+.bannerText {
+  font-family: "BigJohn", Arial;
+  color: black;
+  font-size: 3.9em;
+  font-weight: 300;
+  text-transform: uppercase;
+  line-height: 1em;
+
+  @include mobile {
+    border: 10px solid #fff;
+    font-size: 3em;
+    padding: 10px 15px;
+  }
+}
+
+.highlight {
+  color: #0041C2;
+}

@@ -1,0 +1,41 @@
+@use '@/styles/styles.module.scss' as *;
+
+@mixin mobileS() {
+	@media screen and (max-width: $mobileSBreakpoint) {
+		@content;
+	}
+}
+
+@mixin mobile() {
+	@media screen and (max-width: $mobileBreakpoint) {
+		@content;
+	}
+}
+@mixin desktop() {
+	@media screen and (min-width: calc($tabletBreakpoint + 1px)) {
+		@content;
+	}
+}
+@mixin desktopXL() {
+	@media screen and (min-width: calc($desktopXLBreakpoint + 1px)) {
+		@content;
+	}
+}
+
+@mixin tablet() {
+	@media screen and (max-width: $tabletBreakpoint) {
+		@content;
+	}
+}
+
+@mixin tabletOnly() {
+	@media screen and (min-width: calc($mobileBreakpoint + 1px)) and (max-width: $tabletBreakpoint) {
+		@content;
+	}
+}
+
+@mixin tabletAndUp() {
+	@media screen and (min-width: calc($mobileBreakpoint + 1px)) {
+		@content;
+	}
+}

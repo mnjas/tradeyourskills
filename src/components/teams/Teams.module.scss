@@ -1,0 +1,54 @@
+.cardContainer {
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 50px;
+
+  .subtitle {
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: gray;
+  }
+
+  .title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .gridContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 20px;
+  }
+
+  .userCard {
+    display:block;
+    flex-direction: column;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .userImage {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .userInfo {
+
+    .userName {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .userRole,
+    .userLocation {
+      font-size: 0.9rem;
+      color: #555;
+    }
+  }
+}

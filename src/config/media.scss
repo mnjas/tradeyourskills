@@ -1,0 +1,43 @@
+// MEDIA QUERIES
+@mixin tablet {
+    @media screen and (max-width: 1023px) {
+      @content;
+    }
+  }
+  
+  @mixin onlyTablet {
+    @media screen and (min-width: 751px) and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-desktop {
+    @media screen and (min-width: 751px) {
+        @content;
+    }
+  }
+  
+  @mixin tabletToMobile {
+    @media screen and (min-width: 450px) and (max-width: 750px) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media screen and (max-width: 750px) {
+      @content;
+    }
+  }
+  
+  @mixin xs-mobile {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  }
+  
+  @mixin xxs-mobile {
+    @media screen and (max-width: 350px) {
+      @content;
+    }
+  }
+  

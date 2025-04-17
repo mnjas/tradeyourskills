@@ -1,0 +1,59 @@
+.cardContainer {
+  max-width: 1140px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+  font-family: BigJohn, Arial;
+
+  .subtitle {
+    font-size: 1.2rem;
+    color: #FF9500;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .cardGrid {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .card {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    border-radius: 8px;
+    overflow: hidden;
+
+    .cardImage {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: background 0.3s ease-in-out;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.6);
+      }
+    }
+  }
+}

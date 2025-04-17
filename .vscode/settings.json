@@ -1,0 +1,8 @@
+{
+    "editor.tabSize": 2,
+    "editor.formatOnSave": true,
+    "typescript.format.semicolons": "remove",
+    "javascript.format.semicolons": "remove",
+    "javascript.preferences.quoteStyle": "single",
+    "editor.detectIndentation": false
+}
