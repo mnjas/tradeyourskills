@@ -1,4 +1,4 @@
-import CategoryGrid from '@/components/categoryGrid/CategoryGrid'
+import CategoryGrid from '../../components/categoryGrid/CategoryGrid'
 
 const categories = [
   {

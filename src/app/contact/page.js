@@ -1,9 +1,8 @@
-import ContactForm from "@/components/contactForm/ContactForm"
+import ContactForm from "../../components/contactForm/ContactForm"
 import styles from "./contact.module.scss"
-import Map from '@/components/map/Map'
-import Banner from '@/components/banner/Banner'
-import Slogan from '@/components/slogan/Slogan'
-import bannerStyles from '@/components/banner/Banner.module.scss'
+import Map from '../../components/map/Map'
+import Banner from '../../components/banner/Banner'
+import bannerStyles from '../../components/banner/Banner.module.scss'
 
 export default async function Contact() {
 

@@ -4,8 +4,28 @@ import { usePathname } from "next/navigation"
 import styles from "./Header.module.scss"
 import Image from "next/image"
 import Link from "next/link"
+import button from "../../styles/buttons.module.scss"
 
 export default function Header() {
+  const [name, setName] = useState('')
+
+  const [showLogout, setShowLogout] = useState(false)
+
+  useEffect(() => {
+    const updateName = () => {
+      const storedName = localStorage.getItem('name')
+      setName(storedName)
+    }
+
+    updateName()
+    window.addEventListener("authChanged", updateName)
+
+    return () => {
+      window.removeEventListener("authChanged", updateName)
+    }
+  }, [])
+
+
   const pathname = usePathname()
 
   const [isScrolled, setIsScrolled] = useState(false)
@@ -60,13 +80,35 @@ export default function Header() {
           <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
             <MenuLink onClick={onCloseMenu} href="/" currentUrl={pathname}>Accueil</MenuLink>
             <MenuLink onClick={onCloseMenu} href="/skills" currentUrl={pathname}>Competences</MenuLink>
-            <MenuLink onClick={onCloseMenu} href="/about" currentUrl={pathname}>À propos</MenuLink>
+            <MenuLink onClick={onCloseMenu} href="/about" currentUrl={pathname}>A propos</MenuLink>
             <MenuLink onClick={onCloseMenu} href="/contact" currentUrl={pathname}>Contact</MenuLink>
           </nav>
 
-          <div className={styles.authButtons}>
-            <Link href="/register" className={styles.authButton}>S'inscrire</Link>
-            <Link href="/login" className={styles.authButtonSecondary}>Se connecter</Link>
+          <div className={button.authButtons}>
+            {name ? (
+              <div className={button.loggedIn}>
+                <span onClick={() => setShowLogout(!showLogout)} style={{ cursor: 'pointer' }}>
+                  Bonjour, {name}
+                </span>
+                {showLogout && (
+                  <button
+                    className={button.disconnect}
+                    onClick={() => {
+                      localStorage.removeItem('token')
+                      localStorage.removeItem('name')
+                      window.location.href = '/'
+                    }}
+                  >
+                    Se déconnecter
+                  </button>
+                )}
+              </div>
+            ) : (
+              <>
+                <Link href="/register" className={button.authButton}>S'inscrire</Link>
+                <Link href="/login" className={button.authButtonSecondary}>Se connecter</Link>
+              </>
+            )}
           </div>
         </div>
       </header>

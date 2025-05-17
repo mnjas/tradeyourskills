@@ -1,6 +1,6 @@
-import Footer from '@/components/footer/Footer'
+import Footer from '../components/footer/Footer'
 import './layout.scss'
-import Header from '@/components/header/Header.js'
+import Header from '../components/header/Header'
 
 // Fonts
 

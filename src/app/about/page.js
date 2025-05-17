@@ -1,9 +1,9 @@
-import RectangleCeo from '@/components/rectangleCeo/RectangleCeo'
+import RectangleCeo from '../../components/rectangleCeo/RectangleCeo'
 import styles from "./about.module.scss"
-import Teams from "@/components/teams/Teams"
-import Banner from '@/components/banner/Banner'
-import Slogan from '@/components/slogan/Slogan'
-import bannerStyles from '@/components/banner/Banner.module.scss'
+import Teams from "../../components/teams/Teams"
+import Banner from '../../components/banner/Banner'
+import Slogan from '../../components/slogan/Slogan'
+import bannerStyles from '../../components/banner/Banner.module.scss'
 
 
 export default async function About() {

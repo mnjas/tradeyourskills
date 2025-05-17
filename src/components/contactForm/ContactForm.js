@@ -1,6 +1,6 @@
 "use client"
 import { useState } from "react"
-import styles from "@/app/contact/contact.module.scss"
+import styles from "../../app/contact/contact.module.scss"
 
 export default function ContactForm({ data }) {
   const [isSend, setIsSend] = useState(false)

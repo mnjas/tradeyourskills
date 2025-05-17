@@ -1,8 +1,9 @@
 import styles from "./skills.module.scss"
-import Banner from '@/components/banner/Banner'
-import Slogan from '@/components/slogan/Slogan'
-import CategoryGrid from '@/components/categoryGrid/CategoryGrid'
-import bannerStyles from '@/components/banner/Banner.module.scss'
+import Banner from '../../components/banner/Banner'
+import Slogan from '../../components/slogan/Slogan'
+import CategoryGrid from '../../components/categoryGrid/CategoryGrid'
+import bannerStyles from '../../components/banner/Banner.module.scss'
+import PrivatePage from '../../components/privatePage/PrivatePage'
 
 const skillsCategories = [
   {
@@ -18,67 +19,67 @@ const skillsCategories = [
   {
     title: 'Informatique',
     image: '/assets/informatique.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/informatique',
   },
   {
     title: 'Sport',
     image: '/assets/skate.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/sport',
   },
   {
     title: 'Langues',
     image: '/assets/anglais.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/langues',
   },
   {
     title: 'Arts',
     image: '/assets/dessin.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/arts',
   },
   {
     title: 'Scolaire',
     image: '/assets/maths.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/scolaires',
   },
   {
     title: 'Électricité',
     image: '/assets/electricite.webp',
-    href: '/categories/cuisine',
+    href: '/categories/electricite',
   },
   {
     title: 'Théâtre',
     image: '/assets/theatre.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/theatre',
   },
   {
     title: 'Plomberie',
     image: '/assets/plomberie.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/plomberie',
   },
   {
     title: 'Mécanique',
     image: '/assets/mecanique.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/mecanique',
   },
   {
     title: 'Oenologie',
     image: '/assets/oenologie.jpg',
-    href: '/categories/cuisine',
+    href: '/categories/oenologie',
   },
-
 ]
 
 export default async function Skills() {
-
   return (
-    <main className={styles.container}>
-      <div className={styles.banner}>
-        <Banner>
-          Les competences <span className={bannerStyles.highlight}>disponibles</span>
-        </Banner>
-      </div>
-      <Slogan />
-      <CategoryGrid items={skillsCategories} />
-    </main>
+    <PrivatePage>
+      <main className={styles.container}>
+        <div className={styles.banner}>
+          <Banner>
+            Les competences <span className={bannerStyles.highlight}>disponibles</span>
+          </Banner>
+        </div>
+        <Slogan />
+        <CategoryGrid items={skillsCategories} />
+      </main>
+    </PrivatePage>
   )
 }

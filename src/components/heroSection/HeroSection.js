@@ -1,11 +1,10 @@
-import React from "react";
-import styles from "./HeroSection.module.scss";
+import React from "react"
+import styles from "./HeroSection.module.scss"
 
 const HeroSection = () => {
   return (
     <div className={styles.heroSection}>
 
-      {/* Partie droite : Texte et barre de recherche */}
       <div className={styles.textContainer}>
         <h2 className={styles.title}>Trouvez ce que vous cherchez</h2>
         <h4 className={styles.subtitle}>Recherchez parmi toutes nos compétences</h4>
@@ -15,12 +14,11 @@ const HeroSection = () => {
         </div>
       </div>
 
-       {/* Partie droite : Image */}
-       <div className={styles.imageContainer}>
+      <div className={styles.imageContainer}>
         <img src="/assets/image header.png" alt="Illustration" />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection

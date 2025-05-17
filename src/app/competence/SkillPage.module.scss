@@ -1,0 +1,106 @@
+@use "@/config/media.scss" as *;
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  text-align: left;
+  font-family: Lato, sans-serif;
+
+  @include mobile {
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+  }
+}
+
+.bannerSecond {
+  background: #0041C2;
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  height: 250px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin-bottom: 30px;
+
+  @include tablet {
+    height: 300px;
+  }
+
+  @include mobile {
+    height: 200px;
+  }
+
+  .title {
+    position: absolute;
+    line-height: 1em;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 35px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    z-index: 2;
+    font-family: "BigJohn";
+
+    @include mobile {
+      top: 45%;
+      font-size: 27px;
+      line-height: 0.9em;
+      text-align: center;
+      width: 75%;
+    }
+  }
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 50px;
+  place-items: center;
+  padding: 40px;
+  text-align: center;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 15px;
+  background: #FFF;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+  color: #0041C2;
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.80rem;
+  color: #555;
+}
+
+.avatarImg {
+  border-radius: 50%;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+}

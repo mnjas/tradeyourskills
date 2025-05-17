@@ -4,7 +4,6 @@ import Slogan from '@/components/slogan/Slogan'
 import bannerStyles from '@/components/banner/Banner.module.scss'
 import styles from "../../skills/skills.module.scss"
 
-
 const musicSubcategories = [
   {
     title: 'Guitare',
