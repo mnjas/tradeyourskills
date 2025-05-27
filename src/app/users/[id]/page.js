@@ -9,12 +9,14 @@ export default function UserPage() {
   const [user, setUser] = useState(null)
   const [recommendations, setRecommendations] = useState([])
 
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/users/${id}`)
+    fetch(`${API_BASE_URL}/api/users/${id}`)
       .then(res => res.json())
       .then(data => setUser(data))
 
-    fetch(`http://localhost:5000/api/users/${id}/recommendations`)
+    fetch(`${API_BASE_URL}/api/users/${id}/recommendations`)
       .then(res => res.json())
       .then(setRecommendations)
   }, [id])

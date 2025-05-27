@@ -14,8 +14,11 @@ export default function SkillPage() {
   const [users, setUsers] = useState([])
   const { skill } = useParams()
 
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+
+
   useEffect(() => {
-    fetch(`http://localhost:5000/api/users/skill/${skill}`)
+    fetch(`${API_BASE_URL}/api/users/skill/${skill}`)
       .then(res => res.json())
       .then(data => setUsers(data))
   }, [skill])

@@ -12,10 +12,12 @@ export default function ListUserPage() {
   const [loading, setLoading] = useState(true)
   const router = useRouter()
 
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+
   useEffect(() => {
     async function fetchUsers() {
       try {
-        const res = await fetch("http://localhost:5000/api/users/")
+        const res = await fetch(`http://localhost:5000/api/users/`)
         const data = await res.json()
         setUsers(data)
       } catch (err) {
