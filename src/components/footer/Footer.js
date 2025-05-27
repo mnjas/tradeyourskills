@@ -18,15 +18,12 @@ const Footer = () => {
         </div>
       </div>
 
-      {/* Section inférieure */}
       <div className={styles.bottomSection}>
-        {/* Coordonnées à gauche */}
         <div className={styles.contact}>
           <p>info@tradeyourskills.com</p>
           <p>+33 6 12 34 56 78</p>
         </div>
 
-        {/* Liens à droite */}
         <div className={styles.links}>
           <Link href="/">Accueil</Link>
           <Link href="/about">À propos</Link>

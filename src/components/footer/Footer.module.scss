@@ -43,12 +43,14 @@
 
 .logo {
   text-align: center;
-  font-size: 28px;
+  font-size: 34px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 0.5;
 
   .skills {
-    color: #0041C2;
+    background: #0041C2;
+    padding: 15px;
+    color: #fff;
   }
 
   @include mobile {
