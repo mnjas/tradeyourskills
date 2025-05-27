@@ -82,7 +82,7 @@ export default async function Skills() {
         <CategoryGrid items={skillsCategories} />
 
         <div className={styles.suggest}>
-          <p>Tu veux enseigner une compétence qui n'est pas encore listée ?</p>
+          <p>Tu veux enseigner une compétence qui n&rsquo;est pas encore listée ?</p>
           <Link href="/suggest-skill" className={styles.suggestLink}>
             👉 Proposer une compétence
           </Link>

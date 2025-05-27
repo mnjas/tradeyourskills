@@ -1,4 +1,4 @@
-@use "@/config/media.scss" as *;
+@use "../../config/media.scss" as *;
 .component {
   max-width: 1140px;
   margin: 0 auto;
@@ -25,7 +25,7 @@
     flex-direction: column;
     text-align: center;
     padding: 20px 10px;
-    height: auto; // laisse l’auto hauteur selon contenu
+    height: auto;
   }
 }
 

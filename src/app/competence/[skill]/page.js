@@ -5,6 +5,7 @@ import styles from '../SkillPage.module.scss'
 import Banner from '../../../components/banner/Banner'
 import bannerStyles from '../../../components/banner/Banner.module.scss'
 import Slogan from '../../../components/slogan/Slogan'
+import Image from 'next/image'
 
 export default function SkillPage() {
 
@@ -40,7 +41,7 @@ export default function SkillPage() {
             onClick={() => router.push(`/users/${user.id}`)}
             style={{ cursor: 'pointer' }}
           >
-            <img
+            <Image
               src={`https://randomuser.me/api/portraits/men/${user.id % 100}.jpg`}
               alt={`Avatar de ${user.name}`}
               width={100}

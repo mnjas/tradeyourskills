@@ -1,4 +1,4 @@
-@use "@/config/media.scss" as *;
+@use "../../config/media.scss" as *;
 
 .headerWrapper {
   position: relative;
@@ -222,6 +222,26 @@
 
     &.open {
       display: flex;
+    }
+  }
+}
+
+.mobileDisconnectButton {
+  display: none;
+
+  @include mobile {
+    display: block;
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #0041C2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #002f91;
     }
   }
 }

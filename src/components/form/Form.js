@@ -110,13 +110,13 @@ export default function Form({
         {/* Compétence d'intérêt */}
         {setInterest && interest !== undefined && (
           <div className={styles.inputGroup}>
-            <label>Compétence qui m'intéresse</label>
+            <label>Compétence qui m&rsquo;intéresse</label>
             <select
               value={interest}
               onChange={(e) => setInterest(e.target.value)}
               required
             >
-              <option value="">Sélectionner une compétence d'intérêt</option>
+              <option value="">Sélectionner une compétence d&rsquo;intérêt</option>
               <option value="guitare">Guitare</option>
               <option value="anglais">Anglais</option>
               <option value="php">PHP</option>

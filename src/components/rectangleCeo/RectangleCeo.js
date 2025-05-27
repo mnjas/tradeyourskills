@@ -11,7 +11,7 @@ const RectangleCeo = () => {
         </div>
         {/* Contenu à droite */}
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Rejoignez une communauté qui valorise l'échange</h1>
+          <h1 className={styles.title}>Rejoignez une communauté qui valorise l&rsquo;échange</h1>
           <p className={styles.subtitle}>
             Ici, chaque talent compte. En quelques clics, proposez ce que vous savez faire et découvrez des compétences à apprendre, sans barrière et sans pression.
             Un espace collaboratif où apprendre devient un plaisir partagé.

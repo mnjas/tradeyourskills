@@ -47,7 +47,7 @@ export default function UserPage() {
           <div className={styles.review} key={i}>
             <div className={styles.reviewAvatar}>A</div>
             <div className={styles.reviewText}>
-              <p>"Lorem ipsum dolor sit, amet consectetur adipisicing elit."</p>
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
               <small>- Utilisateur {i + 1}</small>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function UserPage() {
 
       {/* User info */}
       <div className={styles.infoBox}>
-        <h2>Informations de l'utilisateur :</h2>
+        <h2>Informations de l&rsquo;utilisateur :</h2>
         <p><strong>Compétence :</strong> {user.skill}</p>
         <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
         <p><strong>Email :</strong> {user.email}</p>

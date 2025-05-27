@@ -27,7 +27,7 @@ export default function ArtsPage() {
     <main className={styles.container}>
       <div className={styles.banner}>
         <Banner>
-          Apprendre l'<span className={bannerStyles.highlight}>arts ?</span>
+          Apprendre l&rsquo;<span className={bannerStyles.highlight}>arts ?</span>
         </Banner>
       </div>
       <Slogan />

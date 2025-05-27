@@ -98,7 +98,7 @@ export default function Header() {
 
             ) : (
               <div className={button.mobileMenuButtons}>
-                <Link href="/register" className={button.authButton} onClick={onCloseMenu}>S'inscrire</Link>
+                <Link href="/register" className={button.authButton} onClick={onCloseMenu}>S&rsquo;inscrire</Link>
                 <Link href="/login" className={button.authButtonSecondary} onClick={onCloseMenu}>Se connecter</Link>
               </div>
             )}
@@ -126,7 +126,7 @@ export default function Header() {
               </div>
             ) : (
               <>
-                <Link href="/register" className={button.authButton}>S'inscrire</Link>
+                <Link href="/register" className={button.authButton}>S&rsquo;inscrire</Link>
                 <Link href="/login" className={button.authButtonSecondary}>Se connecter</Link>
               </>
             )}

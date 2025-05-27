@@ -1,12 +1,13 @@
 import React from "react"
 import styles from "./Footer.module.scss"
+import Link from 'next/link'
 
 const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.newsletter}>
-          <p>S'inscrire à la <span>newsletter</span></p>
+          <p>S&rsquo;inscrire à la <span>newsletter</span></p>
           <input type="email" placeholder="Entrer votre email" className={styles.input} />
         </div>
 
@@ -27,9 +28,9 @@ const Footer = () => {
 
         {/* Liens à droite */}
         <div className={styles.links}>
-          <a href="/">Accueil</a>
-          <a href="/about">À propos</a>
-          <a href="#">Médias sociaux</a>
+          <Link href="/">Accueil</Link>
+          <Link href="/about">À propos</Link>
+          <Link href="#">Médias sociaux</Link>
         </div>
       </div>
     </footer>

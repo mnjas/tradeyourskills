@@ -22,7 +22,7 @@ export default function OenologiePage() {
     <main className={styles.container}>
       <div className={styles.banner}>
         <Banner>
-          Apprendre l'<span className={bannerStyles.highlight}>oenologie ?</span>
+          Apprendre l&rsquo;<span className={bannerStyles.highlight}>oenologie ?</span>
         </Banner>
       </div>
       <Slogan />

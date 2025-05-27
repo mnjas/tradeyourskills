@@ -14,7 +14,7 @@ const Teams = () => {
     <div className={styles.cardContainer}>
       <h4 className={styles.title}>Notre équipe</h4>
       <h2 className={styles.subtitle}>
-        Derrière chaque compétence échangée se cache une équipe passionnée, engagée à faire vivre l'entraide et le partage au quotidien.
+        Derrière chaque compétence échangée se cache une équipe passionnée, engagée à faire vivre l&rsquo;entraide et le partage au quotidien.
       </h2>
       <div className={styles.gridContainer}>
         {users.map((user, index) => (

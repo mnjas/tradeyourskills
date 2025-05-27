@@ -23,7 +23,7 @@ export default async function Article() {
             alt="Logo"
           />
           <p>
-            Trade Your Skills est une plateforme collaborative où chacun peut partager ses compétences en échange de l'apprentissage d'autres talents. Que vous soyez passionné de guitare, doué en mathématiques ou expert en cuisine, ici, le savoir se transmet sans argent, mais avec du temps et de l'entraide. Apprenez, enseignez, échangez… tout simplement !
+            Trade Your Skills est une plateforme collaborative où chacun peut partager ses compétences en échange de l&rsquo;apprentissage d&rsquo;autres talents. Que vous soyez passionné de guitare, doué en mathématiques ou expert en cuisine, ici, le savoir se transmet sans argent, mais avec du temps et de l&rsquo;entraide. Apprenez, enseignez, échangez… tout simplement !
           </p>
         </article>
       </div>
