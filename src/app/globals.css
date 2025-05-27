@@ -1,8 +1,8 @@
 @font-face {
   font-family: 'BigJohn';
-  src: url('/fonts/BigJohn/BigJohn.woff2') format('woff2'),
-       url('/fonts/BigJohn/BigJohn.woff') format('woff'),
-       url('/fonts/BigJohn/BigJohn.ttf') format('truetype');
+  src: url('/assets/fonts/BigJohn.woff2') format('woff2'),
+       url('/assets/fonts/BigJohn.woff') format('woff'),
+       url('/assets/fonts/BigJohn.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
