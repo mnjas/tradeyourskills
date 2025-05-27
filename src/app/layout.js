@@ -1,17 +1,20 @@
+import localFont from 'next/font/local'
 import Footer from '../components/footer/Footer'
-import './layout.scss'
 import Header from '../components/header/Header'
+import './layout.scss'
 
-// Fonts
+const bigJohn = localFont({
+  src: './fonts/BigJohn.woff2',
+  display: 'swap',
+})
 
-// Metadata
 export const metadata = {
   title: "Trade Your Skills",
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="fr">
+    <html lang="fr" className={bigJohn.className}>
       <body>
         <Header />
         {children}
