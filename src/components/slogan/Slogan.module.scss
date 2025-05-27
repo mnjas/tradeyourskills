@@ -1,3 +1,5 @@
+@use "../../config/media.scss" as *;
+
 .slogan {
   text-align: center;
   font-family: Lato, sans-serif;
@@ -25,6 +27,10 @@
   width: 50%;
   margin: 0 auto;
   margin-bottom: 25px;
+
+  @include mobile{
+    width: 75%;
+  }
 }
 
 .suggestionsList {

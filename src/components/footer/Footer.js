@@ -7,8 +7,16 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.topSection}>
         <div className={styles.newsletter}>
-          <p>S&rsquo;inscrire à la <span>newsletter</span></p>
-          <input type="email" placeholder="Entrer votre email" className={styles.input} />
+          <p>
+            S&rsquo;inscrire à la <span>newsletter</span>{' '}
+            <em className={styles.comingSoon}>(Prochainement disponible)</em>
+          </p>
+          <input
+            type="email"
+            placeholder="Entrer votre email"
+            className={styles.input}
+            disabled
+          />
         </div>
 
         <div className={styles.logo}>
@@ -21,13 +29,13 @@ const Footer = () => {
       <div className={styles.bottomSection}>
         <div className={styles.contact}>
           <p>info@tradeyourskills.com</p>
-          <p>+33 6 12 34 56 78</p>
+          <p>+33 6 02 21 53 95</p>
         </div>
 
         <div className={styles.links}>
           <Link href="/">Accueil</Link>
           <Link href="/about">À propos</Link>
-          <Link href="#">Médias sociaux</Link>
+          <Link href="/contact">Nous contacter</Link>
         </div>
       </div>
     </footer>

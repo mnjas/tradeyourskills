@@ -5,9 +5,9 @@ import { useRouter } from 'next/navigation'
 import styles from './Slogan.module.scss'
 
 const competences = [
-  "Guitare", "Cuisine", "Informatique", "Chant", "Anglais",
-  "PHP", "Javascript", "Judo", "Football", "Tennis",
-  "Mathématiques", "Histoire", "Français", "SVT", "Physique-chimie",
+  "Guitare", "Cuisine", "Piano", "Batterie", "Clavecin", "Violon", "Accordéon", "Clarinette", "Flûte", "Saxophone", "Informatique", "Chant", "Anglais",
+  "PHP", "Javascript", "Judo", "Football", "Tennis", "Dessin", "Peinture", "Graffiti", "Cépage", "Vinification", "Domotique", "Éléctricité", "Désembouage",
+  "Mathématiques", "Histoire", "Français", "SVT", "Physique-chimie", "Improvisation", "Freinage", "Cuisine-francaise", "Cuisine-italienne", "Cuisine-asiatique", "Recettes-rapides"
 ]
 
 const Slogan = () => {

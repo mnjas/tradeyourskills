@@ -12,7 +12,7 @@ const users = [
 const User = () => {
   return (
     <div className={styles.cardContainer}>
-      <h2 className={styles.title}>NOS TRADERS APPRECIES</h2>
+      <h2 className={styles.title}>NOS TRADERS ACTIFS</h2>
       <h4 className={styles.subtitle}>Decouvrez les membres les plus actifs de notre communaute</h4>
 
       <div className={styles.gridContainer}>

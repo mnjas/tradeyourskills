@@ -95,7 +95,6 @@ export default function Header() {
               >
                 Se déconnecter
               </button>
-
             ) : (
               <div className={button.mobileMenuButtons}>
                 <Link href="/register" className={button.authButton} onClick={onCloseMenu}>S&rsquo;inscrire</Link>

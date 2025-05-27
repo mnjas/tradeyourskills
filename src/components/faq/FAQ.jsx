@@ -25,7 +25,7 @@ const questions = [
   },
   {
     question: "Comment contacter un autre membre ?",
-    answer: "Une fois connecté, vous pouvez accéder au profil des membres et envoyer une demande d'échange depuis leur fiche.",
+    answer: "Une fois connecté, vous pouvez accéder au profil des membres et envoyer un mail depuis leur fiche.",
   },
 ];
 

@@ -10,6 +10,9 @@ const bigJohn = localFont({
 
 export const metadata = {
   title: "Trade Your Skills",
+  icons: {
+    icon: '/favicon.ico',
+  },
 }
 
 export default function RootLayout({ children }) {

@@ -6,11 +6,11 @@ import styles from "../heroSection/HeroSection.module.scss"
 const SearchSection = () => {
   const [searchTerm, setSearchTerm] = useState("")
 
-  const competences = [
-    "Guitare", "Cuisine", "Informatique", "Chant", "Anglais",
-    "PHP", "Javascript", "Judo", "Football", "Tennis",
-    "Mathématiques", "Histoire", "Français", "SVT", "Physique-chimie",
-  ]
+const competences = [
+  "Guitare", "Cuisine", "Piano", "Batterie", "Clavecin", "Violon", "Accordéon", "Clarinette", "Flûte", "Saxophone", "Informatique", "Chant", "Anglais",
+  "PHP", "Javascript", "Judo", "Football", "Tennis", "Dessin", "Peinture", "Graffiti", "Cépage", "Vinification", "Domotique", "Éléctricité", "Désembouage",
+  "Mathématiques", "Histoire", "Français", "SVT", "Physique-chimie", "Improvisation", "Freinage", "Cuisine-francaise", "Cuisine-italienne", "Cuisine-asiatique", "Recettes-rapides"
+]
 
   const filtered = competences.filter((comp) =>
     comp.toLowerCase().includes(searchTerm.toLowerCase())
@@ -18,7 +18,7 @@ const SearchSection = () => {
 
   return (
     <div className={styles.textContainer}>
-      <h2 className={styles.title}>Trouvez ce que vous cherchez</h2>
+      <h1 className={styles.title}>Trouvez ce que vous cherchez</h1>
       <h4 className={styles.subtitle}>Recherchez parmi toutes nos compétences</h4>
 
       <div className={styles.searchBar}>

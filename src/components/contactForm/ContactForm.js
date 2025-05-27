@@ -51,19 +51,19 @@ export default function ContactForm({ data }) {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroupFonctionSociety}>
-                  <label htmlFor="function">LOREM*</label>
+                  <label htmlFor="function">Email*</label>
                   <input
                     type="text"
-                    id="function"
-                    name="job"
+                    id="mail"
+                    name="mail"
                   />
                 </div>
                 <div className={styles.formGroupFonctionSociety}>
-                  <label htmlFor="company">LOREM*</label>
+                  <label htmlFor="company">Téléphone*</label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
+                    type="tel"
+                    id="tel"
+                    name="tel"
                   />
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function ContactForm({ data }) {
           </div>
           <div className={styles.column}>
             <p>
-              Notre équipe est disponible du lundi au vendredi de 9h à 18h. Vous pouvez nous joindre par e-mail ou via le formulaire ci-dessus. Chaque message compte pour nous : n&rsquo;hésitez pas à nous contacter !
+              Notre équipe est disponible du lundi au vendredi de 9h à 18h. Vous pouvez nous joindre par e-mail ou via le formulaire ci-dessus. Chaque message compte pour nous, n&rsquo;hésitez pas à nous contacter !
             </p>
           </div>
         </div>

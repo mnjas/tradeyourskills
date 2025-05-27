@@ -7,7 +7,7 @@ const Rectangle = () => {
     <div className={styles.component}>
       <div className={styles.banner}>
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Échangez vos compétences en toute simplicité</h1>
+          <h2 className={styles.title}>Échangez vos compétences en toute simplicité</h2>
           <p className={styles.subtitle}>
             Partagez ce que vous savez faire et apprenez de nouvelles choses grâce à notre communauté.
             Que vous soyez passionné de musique, de langues, de sport ou de développement, ici, tout le monde a quelque chose à transmettre.

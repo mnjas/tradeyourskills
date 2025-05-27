@@ -1,6 +1,7 @@
 import React from "react"
 import styles from "./CardGrid.module.scss"
 import Link from 'next/link'
+import PrivatePage from '../privatePage/PrivatePage'
 
 const CardGrid = () => {
   const cards = [
@@ -29,7 +30,6 @@ const CardGrid = () => {
           </Link>
         ))}
       </div>
-
       <div className={styles.buttonWrapper}>
         <Link href="/skills" className={styles.seeMoreButton}>
           Voir plus
