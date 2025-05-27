@@ -49,7 +49,7 @@ export default function SkillPage() {
               className={styles.avatarImg}
             />
             <h3>{user.name}</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure excepturi odit deleniti pariatur commodi perferendis veritatis, a culpa, nostrum tempore minus quidem, iste expedita animi qui inventore beatae ut eaque.</p>
+            <p>{user.description}</p>
           </div>
         ))}
       </div>

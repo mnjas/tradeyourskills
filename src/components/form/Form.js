@@ -18,6 +18,8 @@ export default function Form({
   setCity,
   phone,
   setPhone,
+  description,
+  setDescription,
   error,
   submitLabel
 }) {
@@ -84,7 +86,7 @@ export default function Form({
 
         {setSkill && skill !== undefined && (
           <div className={styles.inputGroup}>
-            <label>Compétence</label>
+            <label>Compétence à transmettre</label>
             <select
               value={skill}
               onChange={(e) => setSkill(e.target.value)}
@@ -92,7 +94,19 @@ export default function Form({
             >
               <option value="">Sélectionner une compétence</option>
               <option value="guitare">Guitare</option>
+              <option value="piano">Piano</option>
+              <option value="batterie">Batterie</option>
+              <option value="violon">Violon</option>
+              <option value="accordeon">Accordéon</option>
+              <option value="clarinette">Clarinette</option>
+              <option value="flute">Flûte</option>
+              <option value="saxophone">Saxophone</option>
+              <option value="clavecin">Clavecin</option>
               <option value="anglais">Anglais</option>
+              <option value="italien">Italien</option>
+              <option value="dessin">Dessin</option>
+              <option value="peinture">Peinture</option>
+              <option value="graffiti">Graffiti</option>
               <option value="php">PHP</option>
               <option value="javascript">Javascript</option>
               <option value="judo">Judo</option>
@@ -103,6 +117,17 @@ export default function Form({
               <option value="francais">Francais</option>
               <option value="svt">SVT</option>
               <option value="physique">Physique-chimie</option>
+              <option value="cepage">Cépage</option>
+              <option value="vinification">Vinification</option>
+              <option value="domotique">Domotique</option>
+              <option value="electricite">Éléctricité</option>
+              <option value="improvisation">Improvisation</option>
+              <option value="desembouage">Désembouage</option>
+              <option value="freinage">Freinage</option>
+              <option value="cuisine-francaise">Cuisine francaise</option>
+              <option value="cuisine-italienne">Cuisine italienne</option>
+              <option value="cuisine-asiatique">Cuisine asiatique</option>
+              <option value="recette-rapide">Recette rapide</option>
             </select>
           </div>
         )}
@@ -118,7 +143,19 @@ export default function Form({
             >
               <option value="">Sélectionner une compétence d&rsquo;intérêt</option>
               <option value="guitare">Guitare</option>
+              <option value="piano">Piano</option>
+              <option value="batterie">Batterie</option>
+              <option value="violon">Violon</option>
+              <option value="accordeon">Accordéon</option>
+              <option value="clarinette">Clarinette</option>
+              <option value="flute">Flûte</option>
+              <option value="saxophone">Saxophone</option>
+              <option value="clavecin">Clavecin</option>
               <option value="anglais">Anglais</option>
+              <option value="italien">Italien</option>
+              <option value="dessin">Dessin</option>
+              <option value="peinture">Peinture</option>
+              <option value="graffiti">Graffiti</option>
               <option value="php">PHP</option>
               <option value="javascript">Javascript</option>
               <option value="judo">Judo</option>
@@ -129,11 +166,34 @@ export default function Form({
               <option value="francais">Francais</option>
               <option value="svt">SVT</option>
               <option value="physique">Physique-chimie</option>
+              <option value="cepage">Cépage</option>
+              <option value="vinification">Vinification</option>
+              <option value="domotique">Domotique</option>
+              <option value="electricite">Éléctricité</option>
+              <option value="improvisation">Improvisation</option>
+              <option value="desembouage">Désembouage</option>
+              <option value="freinage">Freinage</option>
+              <option value="cuisine-francaise">Cuisine francaise</option>
+              <option value="cuisine-italienne">Cuisine italienne</option>
+              <option value="cuisine-asiatique">Cuisine asiatique</option>
+              <option value="recette-rapide">Recette rapide</option>
             </select>
           </div>
         )}
 
         {error && <p className={styles.error}>{error}</p>}
+
+        {setDescription && description !== undefined && (
+          <div className={styles.inputGroup}>
+            <textarea
+              value={description}
+              onChange={(e) => setDescription(e.target.value)}
+              placeholder="Décrivez-vous"
+              rows={4}
+              required
+            />
+          </div>
+        )}
 
         <button type="submit" className={styles.submitButton}>
           {submitLabel}

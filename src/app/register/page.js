@@ -11,6 +11,7 @@ export default function Register() {
   const [password, setPassword] = useState('')
   const [city, setCity] = useState('')
   const [phone, setPhone] = useState('')
+  const [description, setDescription] = useState('')
   const [error, setError] = useState('')
   const router = useRouter()
 
@@ -23,7 +24,7 @@ export default function Register() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, skill, interest, email, password, city, phone }),
+        body: JSON.stringify({ name, skill, interest, email, password, city, phone, description }),
 
       })
 
@@ -56,6 +57,8 @@ export default function Register() {
       setCity={setCity}
       phone={phone}
       setPhone={setPhone}
+      description={description}
+      setDescription={setDescription}
       error={error}
       submitLabel="S'inscrire"
     />

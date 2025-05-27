@@ -8,7 +8,7 @@ router.get('/skill/:skill', async (req, res) => {
   try {
     const { skill } = req.params
     const [rows] = await pool.query(
-      'SELECT id, name, email FROM users WHERE skill = ?',
+      'SELECT id, name, email, description FROM users WHERE skill = ?',
       [skill]
     )
     res.json(rows)
@@ -23,7 +23,7 @@ router.get('/:id', async (req, res) => {
   try {
     const { id } = req.params
     const [rows] = await pool.query(
-      'SELECT id, name, email, skill, city, phone FROM users WHERE id = ?',
+      'SELECT id, name, email, skill, city, phone, description FROM users WHERE id = ?',
       [id]
     )
 
@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
 router.get('/', async (req, res) => {
   try {
     const [rows] = await pool.query(
-      'SELECT id, name, email, skill, city, phone FROM users'
+      'SELECT id, name, email, skill, city, phone, description FROM users'
     )
     res.json(rows)
   } catch (err) {

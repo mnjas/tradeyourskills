@@ -8,7 +8,7 @@ const router = express.Router()
 // Inscription
 router.post('/register', async (req, res) => {
   try {
-    const { name, email, password, skill, interest, city, phone } = req.body
+    const { name, email, password, skill, interest, city, phone, description } = req.body
 
     const [rows] = await pool.query('SELECT * FROM users WHERE email = ?', [email])
     if (rows.length > 0) return res.status(400).send('Cet email est déjà utilisé')
@@ -16,8 +16,8 @@ router.post('/register', async (req, res) => {
     const hashed = await bcrypt.hash(password, 10)
 
     await pool.query(
-      'INSERT INTO users (name, email, password, skill, interest, city, phone) VALUES (?, ?, ?, ?, ?, ?, ?)',
-      [name, email, hashed, skill, interest, city, phone]
+      'INSERT INTO users (name, email, password, skill, interest, city, phone, description) VALUES (?, ?, ?, ?, ?, ?, ?, ?)',
+      [name, email, hashed, skill, interest, city, phone, description]
     )
 
     res.status(201).send('Compte créé avec succès !')

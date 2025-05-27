@@ -61,6 +61,7 @@ export default function UserPage() {
         <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
         <p><strong>Email :</strong> {user.email}</p>
         <p><strong>Ville :</strong> {user.city || 'Non renseignée'}</p>
+        <p><strong>Description :</strong> {user.description || 'Non renseignée'}</p>
 
         <a href={`mailto:${user.email}`} className={styles.contactButton}>
           Contacter
