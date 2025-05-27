@@ -1,12 +1,11 @@
 import React from "react"
-import styles from "./Rectangle.module.scss"
+import styles from "../rectangleCeo/RectangleCeo.module.scss"
 import Link from 'next/link'
 
 const Rectangle = () => {
   return (
     <div className={styles.component}>
       <div className={styles.banner}>
-        {/* Contenu à gauche */}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Échangez vos compétences en toute simplicité</h1>
           <p className={styles.subtitle}>
@@ -17,7 +16,6 @@ const Rectangle = () => {
             En savoir plus
           </Link>
         </div>
-
         <div className={styles.imageContainer}>
           <img src="/assets/banner-img.png" alt="Illustration" />
         </div>

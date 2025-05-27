@@ -5,11 +5,9 @@ const RectangleCeo = () => {
   return (
     <div className={styles.component}>
       <div className={styles.banner}>
-        {/* Image à gauche */}
         <div className={styles.imageContainer}>
           <img src="/assets/rectangle-ceo.png" alt="Illustration" />
         </div>
-        {/* Contenu à droite */}
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Rejoignez une communauté qui valorise l&rsquo;échange</h1>
           <p className={styles.subtitle}>

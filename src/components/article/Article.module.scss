@@ -18,7 +18,6 @@
 }
 
 .banner {
-  // background-image: url("/assets/banner-contact.webp");
   background: #0041C2;
   position: relative;
   width: 100%;
@@ -62,10 +61,11 @@
 
     @include mobile {
       border: 10px solid #fff;
-      top: 45%;
+      top: 42%;
       font-size: 27px;
       text-align: center;
       width: 75%;
+      line-height: 30px;
     }
   }
 }

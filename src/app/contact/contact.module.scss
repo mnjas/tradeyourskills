@@ -28,7 +28,9 @@
   @include mobile {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 20px;
   }
 }
 
@@ -38,12 +40,10 @@
 
   @include mobile {
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     margin-bottom: 20px;
   }
 }
-
-
 
 .contactFormTitle {
   color: #000;
@@ -54,6 +54,7 @@
 
   @include mobile {
     font-size: 1.8em;
+    text-align: center;
   }
 }
 
@@ -63,9 +64,8 @@
   margin-bottom: 15px;
 
   @include mobile {
-    display: flex;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 }
 
@@ -98,13 +98,17 @@
 
   @include mobile {
     width: 100%;
-
-    input {
-      width: 90%;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     label {
       font-size: 12px;
+      text-align: center;
+    }
+
+    input {
+      width: 90%;
     }
   }
 }
@@ -135,6 +139,13 @@
 
   @include mobile {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    label {
+      text-align: center;
+    }
 
     input {
       width: 70%;
@@ -153,6 +164,10 @@
   }
 
   @include mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     textarea {
       width: 90%;
     }
@@ -175,7 +190,6 @@
     padding: 10px 20px;
     text-transform: uppercase;
     width: auto;
-    cursor: pointer;
 
     &:hover {
       background-color: #fba124;
@@ -185,6 +199,18 @@
   .requiredField {
     margin-top: 10px;
     font-size: 16px;
+  }
+
+  @include mobile {
+    align-items: center;
+
+    .btn {
+      align-self: center;
+    }
+
+    .requiredField {
+      text-align: center;
+    }
   }
 }
 
@@ -246,7 +272,7 @@
 
   @include mobile {
     flex-direction: column;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 15px;
 
     .column {
@@ -254,11 +280,11 @@
 
       p {
         font-weight: normal;
+        text-align: center;
       }
     }
   }
 }
-
 
 .horizontalLine {
   border: none;
@@ -269,7 +295,7 @@
 
   @include mobile {
     width: 80px;
-    margin: 15px 0;
+    margin: 15px auto;
   }
 }
 
@@ -277,17 +303,8 @@
   .contactFormContainer {
     padding-left: 10px;
     padding-right: 10px;
-  }
-
-  .contactFormTitle {
-    text-align: left;
-    font-size: 1.8em;
-  }
-
-  .gridContainer {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+    align-items: center;
   }
 }

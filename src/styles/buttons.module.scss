@@ -32,12 +32,13 @@
   @include mobile {
     padding: 6px 10px;
     font-size: 13px;
+    text-align: center;
   }
 }
 
 .authButton {
   background-color: #0041C2;
-  color: white;
+  color: white !important;
 
   &:hover {
     background-color: #002f91;
@@ -46,12 +47,13 @@
 
 .authButtonSecondary {
   background-color: #fff;
-  color: #0041C2;
+  color: #0041C2 !important;
   border: 1px solid #0041C2;
 
   &:hover {
     background-color: #f0f0f0;
   }
+
 }
 
 .loggedIn {

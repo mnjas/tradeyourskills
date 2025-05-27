@@ -3,7 +3,7 @@ import styles from "./User.module.scss"
 import Link from 'next/link'
 
 const users = [
-  { image: "/assets/avatar1.png", name: "Jean Dupont", role: "Guitariste", location: "Paris, France" },
+  { image: "/assets/avatar1.jpeg", name: "Jean Dupont", role: "Guitariste", location: "Paris, France" },
   { image: "/assets/avatar2.png", name: "Sophie Martin", role: "Oenologue", location: "Lyon, France" },
   { image: "/assets/avatar3.png", name: "Marc Leblanc", role: "Developpeur web", location: "Marseille, France" },
   { image: "/assets/avatar4.png", name: "Claire Fontaine", role: "Danseuse", location: "Bordeaux, France" }

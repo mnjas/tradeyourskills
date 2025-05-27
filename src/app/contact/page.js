@@ -3,6 +3,7 @@ import styles from "./contact.module.scss"
 import Map from '../../components/map/Map'
 import Banner from '../../components/banner/Banner'
 import bannerStyles from '../../components/banner/Banner.module.scss'
+import Slogan from '../../components/slogan/Slogan'
 
 export default async function Contact() {
 
@@ -17,7 +18,7 @@ export default async function Contact() {
         </Banner>
       </div>
       <hr />
-      {/* <Slogan /> */}
+      <Slogan />
       <ContactForm />
 
       {/* google map */}

@@ -41,7 +41,7 @@ export default function SkillPage() {
             onClick={() => router.push(`/users/${user.id}`)}
             style={{ cursor: 'pointer' }}
           >
-            <Image
+            <img
               src={`https://randomuser.me/api/portraits/men/${user.id % 100}.jpg`}
               alt={`Avatar de ${user.name}`}
               width={100}

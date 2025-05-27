@@ -2,11 +2,11 @@ import React from "react"
 import styles from "./Teams.module.scss"
 
 const users = [
-  { image: "/assets/avatar1.png", name: "Jean Dupont", role: "Chef de projet", location: "Paris, France" },
+  { image: "/assets/avatar1.jpeg", name: "Jean Dupont", role: "Chef de projet", location: "Paris, France" },
   { image: "/assets/avatar2.png", name: "Sophie Martin", role: "Développeuse web", location: "Lyon, France" },
   { image: "/assets/avatar3.png", name: "Marc Leblanc", role: "Développeur fullstack", location: "Paris, France" },
   { image: "/assets/avatar4.png", name: "Claire Fontaine", role: "UX/UI Design", location: "Bordeaux, France" },
-  { image: "/assets/avatar4.png", name: "Thomas Meuner", role: "Testeur QA", location: "Paris, France" }
+  { image: "/assets/avatar5.jpeg", name: "Thomas Meuner", role: "Testeur QA", location: "Paris, France" }
 ]
 
 const Teams = () => {
