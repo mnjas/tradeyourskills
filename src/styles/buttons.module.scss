@@ -1,16 +1,41 @@
+@use "@/config/media.scss" as *;
+
 .authButtons {
   display: flex;
   gap: 10px;
-  // justify-content: right;
+
+  @include mobile {
+    display: none;
+  }
 }
 
-.authButton {
-  padding: 5px 10px;
+.mobileMenuButtons {
+  display: none;
+
+  @include mobile {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+
+    .authButton{
+      color: #FFF;
+    }
+    .authButtonSecondary{
+      color: #0041C2;
+    }
+  }
+}
+
+.mobileDisconnectButton {
+  padding: 10px 16px;
+  font-size: 14px;
   background-color: #0041C2;
   color: white;
-  border-radius: 6px;
-  text-decoration: none;
   font-weight: bold;
+  border: none;
+  width: 100%;
+  text-align: center;
   transition: background-color 0.2s ease;
 
   &:hover {
@@ -18,8 +43,31 @@
   }
 }
 
+
+.authButton,
 .authButtonSecondary {
-  @extend .authButton;
+  padding: 7px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+
+  @include mobile {
+    padding: 6px 10px;
+  }
+}
+
+.authButton {
+  background-color: #0041C2;
+  color: white;
+
+  &:hover {
+    background-color: #002f91;
+  }
+}
+
+.authButtonSecondary {
   background-color: #fff;
   color: #0041C2;
   border: 1px solid #0041C2;
@@ -29,17 +77,29 @@
   }
 }
 
-.loggedIn{
+.loggedIn {
   display: flex;
   flex-direction: column;
 
-  .disconnect{
-      padding: 10px;
-      background: #0041C2;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: bold;
+  @include mobile {
+    display: none;
+  }
+
+  .disconnect {
+    padding: 10px;
+    background: #0041C2;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+
+    @include mobile {
+      padding: 8px;
+      font-size: 14px;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
   }
 }

@@ -8,8 +8,8 @@ export default async function Article() {
     <div className={styles.component}>
       {/* Intro */}
       <div className={styles.banner}>
-        <h1 className={styles.title}>lOREM IPSUM</h1>
-        <p className={styles.subtitle}>Trade Your Skills</p>
+        <h1 className={styles.title}>Trade Your Skills</h1>
+        <p className={styles.subtitle}>Apprendre en échangeant du temps !</p>
       </div>
 
       {/* Body */}
@@ -22,7 +22,9 @@ export default async function Article() {
             height={350}
             alt="Logo"
           />
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque maxime aliquam quo esse accusamus facilis minus non, deleniti, quis expedita nemo incidunt. Debitis unde esse in autem quaerat laboriosam quis.</p>
+          <p>
+            Trade Your Skills est une plateforme collaborative où chacun peut partager ses compétences en échange de l'apprentissage d'autres talents. Que vous soyez passionné de guitare, doué en mathématiques ou expert en cuisine, ici, le savoir se transmet sans argent, mais avec du temps et de l'entraide. Apprenez, enseignez, échangez… tout simplement !
+          </p>
         </article>
       </div>
     </div>

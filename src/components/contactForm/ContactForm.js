@@ -112,10 +112,14 @@ export default function ContactForm({ data }) {
         <h2 className={styles.coordinatesTitle}>NOS COORDONNEES</h2>
         <div className={styles.coordinates}>
           <div className={styles.column}>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam veniam sapiente, quas nam voluptate aspernatur eveniet molestiae quasi sed. Nisi labore quidem eligendi vitae praesentium et excepturi veritatis, eaque consequuntur!</p>
+            <p>
+              Trade Your Skills est basé à Paris, mais notre communauté s'étend à travers toute la France. Que vous ayez une question, une remarque ou une demande spécifique, nous sommes à votre écoute et nous engageons à vous répondre rapidement.
+            </p>
           </div>
           <div className={styles.column}>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam repellendus amet vel nostrum error fuga commodi facere dignissimos eligendi aut architecto consequuntur iure neque quod, libero obcaecati eum vitae porro!</p>
+            <p>
+              Notre équipe est disponible du lundi au vendredi de 9h à 18h. Vous pouvez nous joindre par e-mail ou via le formulaire ci-dessus. Chaque message compte pour nous : n’hésitez pas à nous contacter !
+            </p>
           </div>
         </div>
       </div>

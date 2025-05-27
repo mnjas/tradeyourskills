@@ -4,6 +4,7 @@ import Slogan from '../../components/slogan/Slogan'
 import CategoryGrid from '../../components/categoryGrid/CategoryGrid'
 import bannerStyles from '../../components/banner/Banner.module.scss'
 import PrivatePage from '../../components/privatePage/PrivatePage'
+import Link from 'next/link'
 
 const skillsCategories = [
   {
@@ -79,6 +80,13 @@ export default async function Skills() {
         </div>
         <Slogan />
         <CategoryGrid items={skillsCategories} />
+
+        <div className={styles.suggest}>
+          <p>Tu veux enseigner une compétence qui n'est pas encore listée ?</p>
+          <Link href="/suggest-skill" className={styles.suggestLink}>
+            👉 Proposer une compétence
+          </Link>
+        </div>
       </main>
     </PrivatePage>
   )

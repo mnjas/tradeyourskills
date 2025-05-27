@@ -16,7 +16,7 @@ export default function DynamicMap({ latitude, longitude }) {
       center={[latitude, longitude]}
       zoom={13}
       scrollWheelZoom={false}
-      style={{ height: "400px", width: "100%" }}
+      style={{ height: "400px", width: "100%", marginBottom: "50px" }}
     >
       <TileLayer
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

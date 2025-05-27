@@ -1,6 +1,6 @@
-import React from "react";
+import React from "react"
 import styles from "./CardGrid.module.scss"
-
+import Link from 'next/link'
 
 const CardGrid = () => {
   const cards = [
@@ -9,24 +9,34 @@ const CardGrid = () => {
     { image: "/assets/informatique.jpg", text: "Informatique" },
     { image: "/assets/chant.jpg", text: "Chant" },
     { image: "/assets/anglais.jpg", text: "Anglais" },
-  ];
+  ]
 
   return (
     <div className={styles.cardContainer}>
-      <h4 className={styles.subtitle}>Large selection de competences</h4>
-      <h2 className={styles.title}>Lorem ipsum dolor si amet</h2>
+      <h2 className={styles.title}>Large selection de competences</h2>
+      <h4 className={styles.subtitle}>Explorez un monde de competences a portee de main</h4>
       <div className={styles.cardGrid}>
         {cards.map((card, index) => (
-          <div key={index} className={styles.card}>
+          <Link
+            key={index}
+            href={`/competence/${encodeURIComponent(card.text.toLowerCase())}`}
+            className={styles.card}
+          >
             <img src={card.image} alt={card.text} className={styles.cardImage} />
             <div className={styles.overlay}>
               <span className={styles.overlayText}>{card.text}</span>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-    </div>
-  );
-};
 
-export default CardGrid;
+      <div className={styles.buttonWrapper}>
+        <Link href="/skills" className={styles.seeMoreButton}>
+          Voir plus
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+export default CardGrid

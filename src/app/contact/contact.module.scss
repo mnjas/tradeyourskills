@@ -10,9 +10,9 @@
   font-family: Lato, sans-serif;
 
   @include mobile {
+    text-align: center;
     padding-left: 10px;
     padding-right: 10px;
-    text-align: left;
   }
 }
 
@@ -185,7 +185,6 @@
   .requiredField {
     margin-top: 10px;
     font-size: 16px;
-    text-align: right;
   }
 }
 
@@ -195,11 +194,6 @@
   line-height: 1.5;
   color: #333;
   width: 100%;
-  text-align: justify;
-
-  @include mobile {
-    text-align: left;
-  }
 }
 
 .coordinatesTitle {
@@ -211,11 +205,12 @@
 
   @include mobile {
     font-size: 1.6em;
-    text-align: left;
+    text-align: center;
   }
 }
 
 .coordinates {
+  text-align: center;
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -227,7 +222,7 @@
     p {
       margin: 5px 0;
       font-size: 1em;
-      font-weight: bold;
+      font-weight: normal;
       color: #333;
 
       &.largeText {
@@ -251,9 +246,19 @@
 
   @include mobile {
     flex-direction: column;
-    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 15px;
+
+    .column {
+      margin-bottom: 20px;
+
+      p {
+        font-weight: normal;
+      }
+    }
   }
 }
+
 
 .horizontalLine {
   border: none;

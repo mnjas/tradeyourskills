@@ -3,8 +3,8 @@ import styles from "./Teams.module.scss"
 
 const users = [
   { image: "/assets/avatar1.png", name: "Jean Dupont", role: "Chef de projet", location: "Paris, France" },
-  { image: "/assets/avatar2.png", name: "Sophie Martin", role: "Oenologue", location: "Lyon, France" },
-  { image: "/assets/avatar3.png", name: "Marc Leblanc", role: "Développeur web", location: "Paris, France" },
+  { image: "/assets/avatar2.png", name: "Sophie Martin", role: "Développeuse web", location: "Lyon, France" },
+  { image: "/assets/avatar3.png", name: "Marc Leblanc", role: "Développeur fullstack", location: "Paris, France" },
   { image: "/assets/avatar4.png", name: "Claire Fontaine", role: "UX/UI Design", location: "Bordeaux, France" },
   { image: "/assets/avatar4.png", name: "Thomas Meuner", role: "Testeur QA", location: "Paris, France" }
 ]
@@ -13,8 +13,9 @@ const Teams = () => {
   return (
     <div className={styles.cardContainer}>
       <h4 className={styles.title}>Notre équipe</h4>
-      <h2 className={styles.subtitle}>Worem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</h2>
-
+      <h2 className={styles.subtitle}>
+        Derrière chaque compétence échangée se cache une équipe passionnée, engagée à faire vivre l'entraide et le partage au quotidien.
+      </h2>
       <div className={styles.gridContainer}>
         {users.map((user, index) => (
           <div key={index} className={styles.userCard}>

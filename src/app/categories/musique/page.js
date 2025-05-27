@@ -1,7 +1,7 @@
-import CategoryGrid from '@/components/categoryGrid/CategoryGrid'
-import Banner from '@/components/banner/Banner'
-import Slogan from '@/components/slogan/Slogan'
-import bannerStyles from '@/components/banner/Banner.module.scss'
+import CategoryGrid from '../../../components/categoryGrid/CategoryGrid'
+import Banner from '../../../components/banner/Banner'
+import Slogan from '../../../components/slogan/Slogan'
+import bannerStyles from '../../../components/banner/Banner.module.scss'
 import styles from "../../skills/skills.module.scss"
 
 const musicSubcategories = [

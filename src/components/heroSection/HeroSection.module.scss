@@ -1,73 +1,92 @@
+@use "@/config/media.scss" as *;
+
 .heroSection {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  .imageContainer {
+    flex: 1;
     display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: 0 auto;
-  
-    .imageContainer {
-      flex: 1;
-      display: flex;
-      justify-content: right;
-  
-      img {
-        max-width: 100%;
-        width: 70%;
-        height: 100%;
-      }
-    }
-  
-    .textContainer {
-      flex: 1;
-      padding-top: 20px;
-  
-      .title {
-        font-size: 2rem;
-        font-weight: bold;
-        margin-bottom: 10px;
-      }
-  
-      .subtitle {
-        font-size: 1.2rem;
-        color: #262626;
-        margin-bottom: 20px;
-      }
-  
-      .searchBar {
-        display: flex;
-        max-width: 400px;
-        width: 100%;
-        overflow: hidden;
-        height: 40px;
-      
-        input {
-          flex: 1;
-          border: none;
-          outline: none;
-          font-size: 1rem;
-          padding: 0 0.5rem;
-          height: 100%;
-          box-sizing: border-box;
-        }
-      
-        button {
-          width: 50px;
-          height: 100%;
-          background: #0041C2;
-          border: none;
-          cursor: pointer;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 0;
-          box-sizing: border-box;
-        }
-      
-        button:hover {
-          background: #0056b3;
-        }
-      }
-      
+    justify-content: right;
+
+    img {
+      max-width: 100%;
+      width: 70%;
+      height: 100%;
     }
   }
-  
+
+  .textContainer {
+    flex: 1;
+    padding-top: 20px;
+
+    .title {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      color: #262626;
+      margin-bottom: 20px;
+    }
+
+    .searchBar {
+      display: flex;
+      max-width: 400px;
+      width: 100%;
+      overflow: hidden;
+      height: 40px;
+
+      input {
+        flex: 1;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+        padding: 0 0.5rem;
+        height: 100%;
+        box-sizing: border-box;
+      }
+
+      button {
+        width: 50px;
+        height: 100%;
+        background: #0041C2;
+        border: none;
+        cursor: pointer;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      button:hover {
+        background: #0056b3;
+      }
+    }
+  }
+
+  @include mobile {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    .imageContainer {
+      justify-content: center;
+      margin-top: 20px;
+
+      img {
+        width: 50%;
+      }
+    }
+
+    .textContainer {
+      padding: 10px 20px;
+    }
+  }
+}

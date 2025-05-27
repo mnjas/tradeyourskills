@@ -25,7 +25,6 @@ export default function Header() {
     }
   }, [])
 
-
   const pathname = usePathname()
 
   const [isScrolled, setIsScrolled] = useState(false)
@@ -80,10 +79,32 @@ export default function Header() {
           <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ""}`}>
             <MenuLink onClick={onCloseMenu} href="/" currentUrl={pathname}>Accueil</MenuLink>
             <MenuLink onClick={onCloseMenu} href="/skills" currentUrl={pathname}>Competences</MenuLink>
+            <MenuLink onClick={onCloseMenu} href="/list" currentUrl={pathname}>Nos membres</MenuLink>
             <MenuLink onClick={onCloseMenu} href="/about" currentUrl={pathname}>A propos</MenuLink>
             <MenuLink onClick={onCloseMenu} href="/contact" currentUrl={pathname}>Contact</MenuLink>
+
+            {name ? (
+              <button
+                className={button.mobileDisconnectButton}
+                onClick={() => {
+                  localStorage.removeItem('token')
+                  localStorage.removeItem('name')
+                  onCloseMenu()
+                  window.location.href = '/'
+                }}
+              >
+                Se déconnecter
+              </button>
+
+            ) : (
+              <div className={button.mobileMenuButtons}>
+                <Link href="/register" className={button.authButton} onClick={onCloseMenu}>S'inscrire</Link>
+                <Link href="/login" className={button.authButtonSecondary} onClick={onCloseMenu}>Se connecter</Link>
+              </div>
+            )}
           </nav>
 
+          {/* Desktop auth buttons */}
           <div className={button.authButtons}>
             {name ? (
               <div className={button.loggedIn}>

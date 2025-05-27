@@ -18,9 +18,12 @@ export default async function About() {
       <Slogan />
       <div className={styles.gridContainer}>
         <div className={styles.leftSection}>
-          <h2 className={styles.title}>Lorem ipsum dolor si amet</h2>
-          <p className={styles.subtitle}>Nulla fermentum fermentum tincidunt. Nam eget eleifend ligula, ac tincidunt ante. Duis vel iaculis neque, in venenatis elit. Mauris malesuada cursus ante, vitae commodo dui dapibus scelerisque. Sed id laoreet velit. In imperdiet sapien diam, ac iaculis metus tincidunt quis. Nullam a laoreet ex, pulvinar sollicitudin ex. Maecenas auctor consectetur erat vitae rhoncus. Phasellus eu turpis maximus ex ornare dignissim.</p>
-          <p className={styles.subtitle}>Nulla fermentum fermentum tincidunt. Nam eget eleifend ligula, ac tincidunt ante. Duis vel iaculis neque, in venenatis elit. Mauris malesuada cursus ante, vitae commodo dui dapibus scelerisque. Sed id laoreet velit. In imperdiet sapien diam, ac iaculis metus tincidunt quis. Nullam a laoreet ex, pulvinar sollicitudin ex. Maecenas auctor consectetur erat vitae rhoncus. Phasellus eu turpis maximus ex ornare dignissim.</p>
+          <h2 className={styles.title}>Une communauté basée sur le partage</h2>
+          <p className={styles.subtitle}>
+            Chez Trade Your Skills, nous croyons que tout le monde a quelque chose à transmettre. Notre mission est de créer un espace où les compétences circulent librement, sans barrière financière. Que vous sachiez jouer d’un instrument, coder, cuisiner ou parler une langue étrangère, votre savoir a de la valeur.<br /><br />
+            La plateforme a été pensée pour favoriser les échanges humains, l’apprentissage collaboratif et la découverte de nouvelles passions. Chaque utilisateur devient à la fois enseignant et apprenant, dans une logique d'entraide et de bienveillance. Rejoignez un réseau où la transmission devient un moteur de lien social et de développement personnel.
+          </p>
+
         </div>
 
         <div className={styles.rightSection}>
@@ -30,7 +33,6 @@ export default async function About() {
         </div>
       </div>
       <Teams />
-      <RectangleCeo />
     </main>
   )
 }

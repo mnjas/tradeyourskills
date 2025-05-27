@@ -1,9 +1,12 @@
 @use "@/config/media.scss" as *;
-
 .component {
   max-width: 1140px;
   margin: 0 auto;
   padding: 50px;
+
+  @include mobile {
+    padding: 20px; // Ajuster padding sur mobile pour réduire l'espace global
+  }
 }
 
 .banner {
@@ -21,8 +24,8 @@
   @include mobile {
     flex-direction: column;
     text-align: center;
-    padding: 20px;
-    height: auto;
+    padding: 20px 10px;
+    height: auto; // laisse l’auto hauteur selon contenu
   }
 }
 
@@ -30,20 +33,30 @@
   flex: 1;
   max-width: 50%;
   margin-left: 70px;
-  padding-left: 30px;
+  padding-left: 70px;
 
   .title {
     font-size: 2rem;
     font-weight: bold;
     margin-bottom: 10px;
+
+    @include mobile {
+      font-size: 1.5rem; // un peu plus petit sur mobile
+      margin-bottom: 15px;
+    }
   }
 
   .subtitle {
     font-size: 14px;
+
+    @include mobile {
+      font-size: 13px;
+      margin-bottom: 20px;
+    }
   }
 
   .btn {
-    margin-top: 50px;
+    text-decoration: none;
     background-color: #FF9500;
     border: none;
     color: #FFF;
@@ -52,7 +65,7 @@
     padding: 10px 20px;
     text-transform: uppercase;
     width: auto;
-    cursor: pointer;
+    display: inline-block;
 
     &:hover {
       background-color: #fba124;
@@ -61,6 +74,8 @@
 
   @include mobile {
     max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -77,5 +92,10 @@
   @include mobile {
     justify-content: center;
     margin-top: 20px;
+    max-width: 100%;
+
+    img {
+      max-width: 50%;
+    }
   }
 }

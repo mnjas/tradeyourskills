@@ -27,8 +27,8 @@ const Footer = () => {
 
         {/* Liens à droite */}
         <div className={styles.links}>
-          <a href="#">Accueil</a>
-          <a href="#">À propos</a>
+          <a href="/">Accueil</a>
+          <a href="/about">À propos</a>
           <a href="#">Médias sociaux</a>
         </div>
       </div>

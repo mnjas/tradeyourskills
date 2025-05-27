@@ -19,7 +19,6 @@ export default function Login() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ email, password }),
-        credentials: 'include'
       })
 
       if (!response.ok) {
@@ -29,6 +28,7 @@ export default function Login() {
         const data = await response.json()
         localStorage.setItem('token', data.token)
         localStorage.setItem('name', data.name)
+        localStorage.setItem('userId', data.id)
         window.dispatchEvent(new Event("authChanged"))
         router.push('/')
       }

@@ -3,12 +3,30 @@ import React, { useState } from "react";
 import styles from "./FAQ.module.scss";
 
 const questions = [
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
-  { question: "Lorem ipsum dolor si amet ?", answer: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam semper vel nisl nec hendrerit. Lorem ipsum dolor sit amet, consectetur adipiscing elit." },
+  {
+    question: "Comment fonctionne l’échange de compétences ?",
+    answer: "Chaque utilisateur propose une compétence qu’il souhaite partager, et peut en apprendre une autre en retour. L’échange est basé sur le temps, pas sur l’argent.",
+  },
+  {
+    question: "Est-ce que la plateforme est gratuite ?",
+    answer: "Oui, l’inscription et l’utilisation de la plateforme sont entièrement gratuites. L’échange repose sur le partage de savoirs, sans transaction financière.",
+  },
+  {
+    question: "Comment trouver une compétence qui m'intéresse ?",
+    answer: "Vous pouvez utiliser la barre de recherche ou parcourir les catégories pour découvrir les compétences proposées par les membres.",
+  },
+  {
+    question: "Puis-je enseigner plusieurs compétences ?",
+    answer: "Absolument ! Vous pouvez proposer autant de compétences que vous le souhaitez. Cela augmentera vos chances d’échanger.",
+  },
+  {
+    question: "Qui peut s’inscrire sur la plateforme ?",
+    answer: "Toute personne majeure, curieuse d’apprendre ou de partager une compétence. Aucun prérequis n’est nécessaire.",
+  },
+  {
+    question: "Comment contacter un autre membre ?",
+    answer: "Une fois connecté, vous pouvez accéder au profil des membres et envoyer une demande d’échange depuis leur fiche.",
+  },
 ];
 
 const FAQ = () => {

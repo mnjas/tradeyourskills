@@ -1,22 +1,25 @@
-import React from "react";
-import styles from "./RectangleCeo.module.scss";
+import React from "react"
+import styles from "./RectangleCeo.module.scss"
 
 const RectangleCeo = () => {
   return (
     <div className={styles.component}>
       <div className={styles.banner}>
         {/* Image à gauche */}
-      <div className={styles.imageContainer}>
+        <div className={styles.imageContainer}>
           <img src="/assets/rectangle-ceo.png" alt="Illustration" />
         </div>
         {/* Contenu à droite */}
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Lorem ipsum dolor si amet</h1>
-          <p className={styles.subtitle}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus qui suscipit dolorum quam minus ipsum totam. Ratione repudiandae sit nostrum labore quaerat consequatur neque dolore! Dolore soluta hic vel amet?</p>
+          <h1 className={styles.title}>Rejoignez une communauté qui valorise l'échange</h1>
+          <p className={styles.subtitle}>
+            Ici, chaque talent compte. En quelques clics, proposez ce que vous savez faire et découvrez des compétences à apprendre, sans barrière et sans pression.
+            Un espace collaboratif où apprendre devient un plaisir partagé.
+          </p>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default RectangleCeo;
+export default RectangleCeo

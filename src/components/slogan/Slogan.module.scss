@@ -17,6 +17,7 @@
 }
 
 .searchHint {
+  text-align: center;
   font-size: 1rem;
   color: #777;
   border: 1px solid #000;
@@ -24,4 +25,38 @@
   width: 50%;
   margin: 0 auto;
   margin-bottom: 25px;
+}
+
+.suggestionsList {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  max-height: 100px;
+  overflow-y: auto;
+  z-index: 10;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.suggestionItem {
+  display: block;
+  padding: 0.5rem;
+  color: #0041C2;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.suggestionItem:hover {
+  background-color: #f0f0f0;
+}
+
+.noResult {
+  padding: 0.5rem;
+  color: #999;
 }

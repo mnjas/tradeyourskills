@@ -1,0 +1,82 @@
+@use "@/config/media.scss" as *;
+
+.container {
+  max-width: 500px;
+  margin: 60px auto;
+  padding: 30px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+
+  h1 {
+    text-align: center;
+    margin-bottom: 24px;
+    font-size: 24px;
+
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+
+  @include mobile {
+    margin: 30px 16px;
+    padding: 20px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  input,
+  textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+
+    @include mobile {
+      font-size: 14px;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+
+    @include mobile {
+      min-height: 100px;
+    }
+  }
+
+  button {
+    background-color: #0041c2;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+
+    &:hover {
+      background-color: #0031a2;
+    }
+
+    @include mobile {
+      padding: 10px;
+    }
+  }
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-weight: bold;
+}

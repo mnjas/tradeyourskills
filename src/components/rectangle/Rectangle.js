@@ -1,5 +1,6 @@
-import React from "react";
-import styles from "./Rectangle.module.scss";
+import React from "react"
+import styles from "./Rectangle.module.scss"
+import Link from 'next/link'
 
 const Rectangle = () => {
   return (
@@ -7,18 +8,22 @@ const Rectangle = () => {
       <div className={styles.banner}>
         {/* Contenu à gauche */}
         <div className={styles.textContainer}>
-          <h1 className={styles.title}>Lorem ipsum dolor si amet</h1>
-          <p className={styles.subtitle}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus qui suscipit dolorum quam minus ipsum totam. Ratione repudiandae sit nostrum labore quaerat consequatur neque dolore! Dolore soluta hic vel amet?</p>
-          <button className={styles.btn}>En savoir plus</button>
+          <h1 className={styles.title}>Échangez vos compétences en toute simplicité</h1>
+          <p className={styles.subtitle}>
+            Partagez ce que vous savez faire et apprenez de nouvelles choses grâce à notre communauté.
+            Que vous soyez passionné de musique, de langues, de sport ou de développement, ici, tout le monde a quelque chose à transmettre.
+          </p>
+          <Link href="/about" className={styles.btn}>
+            En savoir plus
+          </Link>
         </div>
 
-        {/* Image à droite */}
         <div className={styles.imageContainer}>
           <img src="/assets/banner-img.png" alt="Illustration" />
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Rectangle;
+export default Rectangle
