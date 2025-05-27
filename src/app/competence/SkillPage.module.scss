@@ -107,10 +107,22 @@
   color: #0041C2;
 }
 
-.card p {
-  margin: 0;
-  font-size: 0.80rem;
-  color: #555;
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 10px;
+
+  p {
+    margin: 0;
+    font-size: 0.80rem;
+    line-height: 1.4;
+    color: #333;
+
+    strong {
+      color: #000;
+    }
+  }
 }
 
 .avatarImg {

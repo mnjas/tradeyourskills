@@ -57,11 +57,12 @@ export default function ListUserPage() {
                   className={styles.avatarImg}
                 />
                 <h3>{user.name}</h3>
-                <p>{user.skill ? `Spécialiste en ${user.skill}` : "Compétence non précisée"}</p>
-                <p><strong>Compétence :</strong> {user.skill}</p>
-                <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
-                <p><strong>Email :</strong> {user.email}</p>
-                <p><strong>Ville :</strong> {user.city || 'Non renseignée'}</p>
+                <div className={styles.userInfo}>
+                  <p>{user.skill ? `Spécialiste en ${user.skill}` : "Compétence non précisée"}</p>
+                  <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
+                  <p><strong>Mail :</strong> {user.email}</p>
+                  <p><strong>Ville :</strong> {user.city || 'Non renseignée'}</p>
+                </div>
               </div>
             ))}
           </div>
