@@ -75,29 +75,6 @@
   }
 }
 
-.reviews {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
-  @include mobile {
-    gap: 15px;
-  }
-}
-
-.review {
-  display: flex;
-  background-color: #FAFAF5;
-  border: 2px solid #E6E6E6;
-  padding: 1rem;
-  border-radius: 12px;
-
-  @include mobile {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
 
 .reviewAvatar {
   width: 50px;
@@ -122,7 +99,7 @@
 }
 
 .infoBox {
-  background-color: #FAFAF5;
+  background-color: #FFF;
   border: 2px solid #E6E6E6;
   padding: 3rem;
   border-radius: 12px;
@@ -175,5 +152,59 @@
   @include mobile {
     width: 80px;
     height: 80px;
+  }
+}
+
+.reviewInfo {
+  background-color: #F0F4FF;
+  border-left: 5px solid #0041C2;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 65, 194, 0.1);
+
+  h2 {
+    margin-top: 0;
+    color: #0041C2;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+
+    @include mobile {
+      font-size: 1.3rem;
+      text-align: center;
+    }
+  }
+
+  p {
+    margin: 0;
+    color: #333;
+    font-size: 1rem;
+
+    @include mobile {
+      text-align: center;
+    }
+  }
+
+  .reviewSupport {
+    margin-top: 1rem;
+    background-color: #fff3f3;
+    color: #990000;
+    padding: 1rem;
+    border-left: 4px solid #cc0000;
+    border-radius: 8px;
+    font-size: 0.95rem;
+
+    a {
+      color: #cc0000;
+      font-weight: bold;
+      text-decoration: underline;
+
+      &:hover {
+        color: #a00000;
+      }
+    }
+
+    @include mobile {
+      text-align: center;
+    }
   }
 }

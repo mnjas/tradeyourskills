@@ -45,20 +45,22 @@ export default function UserPage() {
 
       {/* Review */}
       <div className={styles.reviews}>
-        {[1, 2].map((_, i) => (
-          <div className={styles.review} key={i}>
-            <div className={styles.reviewAvatar}>A</div>
-            <div className={styles.reviewText}>
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <small>- Utilisateur {i + 1}</small>
-            </div>
+        <div className={styles.reviewInfo}>
+          <h2>Avis utilisateurs</h2>
+          <p>
+            🕒 Une section pour donner un avis après avoir échangé avec un utilisateur arrive prochainement.
+            Vous pourrez bientôt partager votre expérience !
+          </p>
+
+          <div className={styles.reviewSupport}>
+            ⚠️ Si quelque chose s'est mal passé lors d’un échange, <a href="mailto:mennechetjason@gmail.com">contactez-nous au plus vite</a>. Nous sommes là pour vous aider.
           </div>
-        ))}
+        </div>
       </div>
 
       {/* User info */}
       <div className={styles.infoBox}>
-        <h2>Informations de l&rsquo;utilisateur</h2>
+        <h2>{user.name}</h2>
         <hr />
         <p><strong>Compétence :</strong> {user.skill}</p>
         <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
