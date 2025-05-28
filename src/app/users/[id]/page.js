@@ -53,7 +53,7 @@ export default function UserPage() {
           </p>
 
           <div className={styles.reviewSupport}>
-            ⚠️ Si quelque chose s'est mal passé lors d’un échange, <a href="mailto:mennechetjason@gmail.com">contactez-nous au plus vite</a>. Nous sommes là pour vous aider.
+            ⚠️ Si quelque chose s&rsquo;est mal passé lors d&rsquo;un échange, <a href="mailto:mennechetjason@gmail.com">contactez-nous au plus vite</a>. Nous sommes là pour vous aider.
           </div>
         </div>
       </div>
