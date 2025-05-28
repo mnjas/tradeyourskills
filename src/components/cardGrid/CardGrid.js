@@ -1,12 +1,11 @@
 import React from "react"
 import styles from "./CardGrid.module.scss"
 import Link from 'next/link'
-import PrivatePage from '../privatePage/PrivatePage'
 
 const CardGrid = () => {
   const cards = [
     { image: "/assets/guitare.jpg", text: "Guitare" },
-    { image: "/assets/cuisine.jpg", text: "Cuisine" },
+    { image: "/assets/judo.jpg", text: "Judo" },
     { image: "/assets/informatique.jpg", text: "Informatique" },
     { image: "/assets/chant.jpg", text: "Chant" },
     { image: "/assets/anglais.jpg", text: "Anglais" },
