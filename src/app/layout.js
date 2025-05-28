@@ -9,7 +9,7 @@ const bigJohn = localFont({
 })
 
 export const metadata = {
-  title: "Trade Your Skills",
+  title: "Trade Your Skills - Plateforme d'échange de compétences",
   icons: {
     icon: '/favicon.ico',
   },
