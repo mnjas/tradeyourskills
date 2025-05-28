@@ -1,5 +1,7 @@
 "use client"
+import Link from 'next/link'
 import styles from "../../styles/auth.module.scss"
+import button from '../../styles/buttons.module.scss'
 
 export default function Form({
   title,
@@ -198,6 +200,15 @@ export default function Form({
         <button type="submit" className={styles.submitButton}>
           {submitLabel}
         </button>
+
+        {!setName && (
+          <div style={{ marginTop: '20px', textAlign: 'center' }}>
+            <p>Pas encore de compte ?</p>
+            <Link href="/register" className={button.authButton}>
+              S&rsquo;inscrire
+            </Link>
+          </div>
+        )}
       </form>
     </div>
   )
