@@ -38,6 +38,12 @@
     font-weight: normal;
     font-size: 18px;
     color: #666;
+
+    @include mobile{
+      display: flex;
+      flex-direction: column;
+      margin-top: 10px;
+    }
   }
 
   .input {
