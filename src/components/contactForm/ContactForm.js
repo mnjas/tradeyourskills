@@ -5,20 +5,79 @@ import styles from "../../app/contact/contact.module.scss"
 export default function ContactForm({ data }) {
   const [isSend, setIsSend] = useState(false)
   const [isSending, setIsSending] = useState(false)
+  const [error, setError] = useState("")
 
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if (isSending) {
+    if (isSending) return
+    setIsSending(true)
+    setError("")
+
+    const form = new FormData(e.target)
+    const payload = Object.fromEntries(form.entries())
+
+    const nameRegex = /^[A-Za-zÀ-ÿ\-'\s]{2,}$/
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/
+    const phoneRegex = /^(?:\+33|0)[1-9](?:\d{2}){4}$/
+
+    if (!nameRegex.test(payload.firstname)) {
+      setError("Veuillez entrer un prénom valide (au moins 2 lettres, lettres uniquement).")
+      setIsSending(false)
       return
     }
-    setIsSending(true)
+
+    if (!nameRegex.test(payload.lastname)) {
+      setError("Veuillez entrer un nom valide (au moins 2 lettres, lettres uniquement).")
+      setIsSending(false)
+      return
+    }
+
+    if (!emailRegex.test(payload.mail)) {
+      setError("Veuillez entrer une adresse email valide.")
+      setIsSending(false)
+      return
+    }
+
+    if (payload.tel && payload.tel.trim() !== "") {
+      if (!phoneRegex.test(payload.tel)) {
+        setError("Veuillez entrer un numéro de téléphone valide (ex: 0612345678 ou +33612345678).")
+        setIsSending(false)
+        return
+      }
+    }
+
+    if (!payload.message || payload.message.trim().length < 5) {
+      setError("Merci d'écrire un message suffisamment clair.")
+      setIsSending(false)
+      return
+    }
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      })
+
+      if (res.ok) {
+        setIsSend(true)
+      } else {
+        const data = await res.json()
+        setError(data?.error || "Erreur lors de l'envoi du formulaire.")
+      }
+    } catch (err) {
+      setError("Erreur réseau ou serveur.")
+    }
+
+    setIsSending(false)
   }
+
   return (
     <div className={styles.gridContainer}>
       <div className={styles.contactForm}>
         {isSend ? (
-          <h2 className={styles.contactFormTitle}>Votre message a ete envoye avec succes!</h2>
+          <h2 className={styles.success}>✅ Merci ! Votre message à été envoyé avec succès !</h2>
         ) : (
           <>
             <h2 className={styles.contactFormTitle}>Vos coordonnees</h2>
@@ -27,6 +86,7 @@ export default function ContactForm({ data }) {
               onSubmit={handleSubmit}
               method="POST"
               className={styles.centeredForm}
+              noValidate
             >
               <div className={styles.formRow}>
                 <div className={styles.formGroupNameFirstName}>
@@ -51,27 +111,26 @@ export default function ContactForm({ data }) {
 
               <div className={styles.formRow}>
                 <div className={styles.formGroupFonctionSociety}>
-                  <label htmlFor="function">Email*</label>
+                  <label htmlFor="mail">Email*</label>
                   <input
-                    type="text"
+                    type="email"
                     id="mail"
                     name="mail"
+                    required
                   />
                 </div>
                 <div className={styles.formGroupFonctionSociety}>
-                  <label htmlFor="company">Téléphone*</label>
+                  <label htmlFor="tel">Téléphone</label>
                   <input
                     type="tel"
                     id="tel"
                     name="tel"
+                    required
                   />
                 </div>
               </div>
-              <label htmlFor="message" className={styles.contactFormTitle}>
-                Votre message
-              </label>
               <div className={styles.textareaGroup}>
-                <label htmlFor="sujet">SUJET*</label>
+                <label htmlFor="message">SUJET*</label>
                 <textarea
                   id="message"
                   name="message"
@@ -82,21 +141,11 @@ export default function ContactForm({ data }) {
                 ></textarea>
               </div>
 
-              <div className={styles.formRow}>
-                <div className={styles.formGroupPhoneOrEmail}>
-                  <label htmlFor="contact">Ajoutez votre numéro de téléphone ou votre e-mail pour être contacté*</label>
-                  <input
-                    type="text"
-                    id="contact"
-                    name="contact"
-                    required
-                  />
-                </div>
-              </div>
+              {error && <p className={styles.error}>{error}</p>}
 
               <div className={styles.submitGroup}>
-                <button type="submit" className={styles.btn}>
-                  Envoyer
+                <button type="submit" className={styles.btn} disabled={isSending}>
+                  {isSending ? "Envoi..." : "Envoyer"}
                 </button>
                 <p className={styles.requiredField}>*Champs obligatoires</p>
               </div>
