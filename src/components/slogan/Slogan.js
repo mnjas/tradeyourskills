@@ -27,6 +27,7 @@ const Slogan = () => {
 
   return (
     <div className={styles.slogan}>
+      <hr />
       <h2 className={styles.actions}>Apprendre, partager, recommencer</h2>
       <p className={styles.subtitle}>Plateforme de partage de compétences</p>
 

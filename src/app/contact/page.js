@@ -17,7 +17,6 @@ export default async function Contact() {
           Contactez-<span className={bannerStyles.highlight}>nous</span>
         </Banner>
       </div>
-      <hr />
       <Slogan />
       <ContactForm />
 
