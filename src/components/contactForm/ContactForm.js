@@ -118,7 +118,7 @@ export default function ContactForm({ data }) {
           </div>
           <div className={styles.column}>
             <p>
-              Notre équipe est disponible du lundi au vendredi de 9h à 18h. Vous pouvez nous joindre par e-mail ou via le formulaire ci-dessus. Chaque message compte pour nous, n&rsquo;hésitez pas à nous contacter !
+              Notre équipe est disponible du lundi au vendredi de 9h à 18h. Vous pouvez nous joindre par e-mail ou via le formulaire ci-dessus. Chaque message compte pour nous, n&rsquo;hésitez pas à nous contacter.
             </p>
           </div>
         </div>

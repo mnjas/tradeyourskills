@@ -58,7 +58,8 @@ export default function UserPage() {
 
       {/* User info */}
       <div className={styles.infoBox}>
-        <h2>Informations de l&rsquo;utilisateur :</h2>
+        <h2>Informations de l&rsquo;utilisateur</h2>
+        <hr />
         <p><strong>Compétence :</strong> {user.skill}</p>
         <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
         <p><strong>Email :</strong> {user.email}</p>

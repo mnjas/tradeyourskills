@@ -191,6 +191,10 @@
     text-transform: uppercase;
     width: auto;
 
+    @include mobile{
+      margin-top: 0;
+    }
+
     &:hover {
       background-color: #fba124;
     }
