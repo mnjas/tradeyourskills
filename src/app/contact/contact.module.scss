@@ -181,7 +181,6 @@
   margin-top: 20px;
 
   .btn {
-    margin-top: 50px;
     background-color: #FF9500;
     border: none;
     color: #FFF;
@@ -190,10 +189,6 @@
     padding: 10px 20px;
     text-transform: uppercase;
     width: auto;
-
-    @include mobile{
-      margin-top: 0;
-    }
 
     &:hover {
       background-color: #fba124;
