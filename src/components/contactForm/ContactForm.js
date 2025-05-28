@@ -77,7 +77,7 @@ export default function ContactForm({ data }) {
     <div className={styles.gridContainer}>
       <div className={styles.contactForm}>
         {isSend ? (
-          <h2 className={styles.success}>✅ Merci ! Votre message à été envoyé avec succès !</h2>
+          <h2 className={styles.success}>✅ Merci ! Votre message a été envoyé avec succès !</h2>
         ) : (
           <>
             <h2 className={styles.contactFormTitle}>Vos coordonnees</h2>
