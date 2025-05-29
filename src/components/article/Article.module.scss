@@ -42,30 +42,38 @@
     object-fit: cover;
     display: block;
   }
-
-  .title {
-    border: 15px solid #fff;
+  .titleWrapper {
     position: absolute;
-    line-height: 1em;
-    margin: 0;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    border: 15px solid #fff;
+    padding: 30px 30px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    max-width: 90%;
+    width: max-content;
+  
+    @include mobile {
+      border: 8px solid #fff;
+      padding: 15px 20px;
+      width: 70%;
+    }
+  }
+
+  .title {
     font-size: 64px;
     color: #fff;
     text-align: center;
     font-weight: bold;
-    z-index: 2;
-    padding: 14px 20px 0;
+    margin: 0;
     font-family: "BigJohn";
-
+  
     @include mobile {
-      border: 10px solid #fff;
-      top: 42%;
-      font-size: 27px;
-      text-align: center;
-      width: 75%;
-      line-height: 30px;
+      font-size: 20px;
     }
   }
 }

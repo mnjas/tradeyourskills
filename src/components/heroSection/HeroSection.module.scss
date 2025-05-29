@@ -43,30 +43,12 @@
 
       input {
         flex: 1;
-        border: none;
+        border: 1px solid #000;
         outline: none;
         font-size: 1rem;
         padding: 0 0.5rem;
         height: 100%;
         box-sizing: border-box;
-      }
-
-      button {
-        width: 50px;
-        height: 100%;
-        background: #0041C2;
-        border: none;
-        cursor: pointer;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      button:hover {
-        background: #0056b3;
       }
     }
   }
