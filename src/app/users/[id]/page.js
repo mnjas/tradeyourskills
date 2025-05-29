@@ -1,29 +1,57 @@
-"use client"
-import { useEffect, useState } from 'react'
-import Image from 'next/image'
-import { useParams } from 'next/navigation'
-import styles from '../userProfile.module.scss'
+"use client";
+import { useEffect, useState } from "react";
+import { useParams } from "next/navigation";
+import styles from "../userProfile.module.scss";
 
 export default function UserPage() {
-  const { id } = useParams()
-  const [user, setUser] = useState(null)
-  const [recommendations, setRecommendations] = useState([])
+  const { id } = useParams();
+  const [user, setUser] = useState(null);
+  const [date, setDate] = useState("");
+  const [message, setMessage] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
 
-  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL
+  const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
 
   useEffect(() => {
     fetch(`${API_BASE_URL}/api/users/${id}`)
-      .then(res => res.json())
-      .then(data => setUser(data))
+      .then((res) => res.json())
+      .then((data) => setUser(data));
+  }, [id]);
 
-    fetch(`${API_BASE_URL}/api/users/${id}/recommendations`)
-      .then(res => res.json())
-      .then(setRecommendations)
-  }, [id])
+  if (!user) return <div>Chargement...</div>;
 
-  if (!user) return <div>Chargement...</div>
+  const sendEmail = async (e) => {
+    e.preventDefault();
+    setIsSending(true);
+    setError("");
+    setSuccess("");
 
-  const avatarUrl = `https://api.dicebear.com/7.x/initials/svg?seed=${user.name}`
+    try {
+      const response = await fetch("/api/send-rdv-notif", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          to: user.email,
+          subject: `Demande de RDV le ${date}`,
+          text: `Bonjour ${user.name},\n\nUne personne souhaite prendre rendez-vous avec vous le ${date}.\n\nMessage :\n${message}\n\nCordialement.`,
+        }),
+      });
+
+      if (response.ok) {
+        setSuccess("✅ Votre demande a été envoyée avec succès !");
+        setMessage("");
+        setDate("");
+      } else {
+        setError("Erreur lors de l'envoi de votre demande.");
+      }
+    } catch (err) {
+      setError("Erreur réseau ou serveur.");
+    } finally {
+      setIsSending(false);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -48,30 +76,71 @@ export default function UserPage() {
         <div className={styles.reviewInfo}>
           <h2>Avis utilisateurs</h2>
           <p>
-            🕒 Une section pour donner un avis après avoir échangé avec un utilisateur arrive prochainement.
-            Vous pourrez bientôt partager votre expérience !
+            🕒 Une section pour donner un avis après avoir échangé avec un
+            utilisateur arrive prochainement. Vous pourrez bientôt partager
+            votre expérience !
           </p>
 
           <div className={styles.reviewSupport}>
-            ⚠️ Si quelque chose s&rsquo;est mal passé lors d&rsquo;un échange, <a href="mailto:mennechetjason@gmail.com">contactez-nous au plus vite</a>. Nous sommes là pour vous aider.
+            ⚠️ Si quelque chose s&rsquo;est mal passé lors d&rsquo;un échange,{" "}
+            <a href="mailto:mennechetjason@gmail.com">
+              contactez-nous au plus vite
+            </a>
+            . Nous sommes là pour vous aider.
           </div>
         </div>
+
+        <form onSubmit={sendEmail} className={styles.rdvForm}>
+          <h3>Vous souhaitez prendre rendez-vous avec {user.name} ?</h3>
+
+          <label>Date du rendez-vous :</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
+          <label>Message :</label>
+          <textarea
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
+          />
+          <button type="submit" disabled={isSending}>
+            {isSending
+              ? "Envoi en cours..."
+              : "Envoyer la demande de rendez-vous"}
+          </button>
+
+          {error && <p className={styles.error}>{error}</p>}
+          {success && <p className={styles.success}>{success}</p>}
+        </form>
       </div>
 
       {/* User info */}
       <div className={styles.infoBox}>
         <h2>{user.name}</h2>
         <hr />
-        <p><strong>Compétence :</strong> {user.skill}</p>
-        <p><strong>Téléphone :</strong> {user.phone || 'Non renseigné'}</p>
-        <p><strong>Email :</strong> {user.email}</p>
-        <p><strong>Ville :</strong> {user.city || 'Non renseignée'}</p>
-        <p><strong>Description :</strong> {user.description || 'Non renseignée'}</p>
+        <p>
+          <strong>Compétence :</strong> {user.skill}
+        </p>
+        <p>
+          <strong>Téléphone :</strong> {user.phone || "Non renseigné"}
+        </p>
+        <p>
+          <strong>Email :</strong> {user.email}
+        </p>
+        <p>
+          <strong>Ville :</strong> {user.city || "Non renseignée"}
+        </p>
+        <p>
+          <strong>Description :</strong> {user.description || "Non renseignée"}
+        </p>
 
         <a href={`mailto:${user.email}`} className={styles.contactButton}>
           Contacter
         </a>
       </div>
     </div>
-  )
+  );
 }
