@@ -1,21 +1,21 @@
-import CategoryGrid from '../../../components/categoryGrid/CategoryGrid'
-import Banner from '../../../components/banner/Banner'
-import Slogan from '../../../components/slogan/Slogan'
-import bannerStyles from '../../../components/banner/Banner.module.scss'
-import styles from "../../skills/skills.module.scss"
+import CategoryGrid from "../../../components/categoryGrid/CategoryGrid";
+import Banner from "../../../components/banner/Banner";
+import Slogan from "../../../components/slogan/Slogan";
+import bannerStyles from "../../../components/banner/Banner.module.scss";
+import styles from "../../skills-list/skills.module.scss";
 
 const languesSubcategories = [
   {
-    title: 'Anglais',
-    image: '/assets/usa.png',
-    href: '/competence/anglais',
+    title: "Anglais",
+    image: "/assets/usa.png",
+    href: "/competence/anglais",
   },
   {
-    title: 'Italien',
-    image: '/assets/italie.png',
-    href: '/competence/italien',
+    title: "Italien",
+    image: "/assets/italie.png",
+    href: "/competence/italien",
   },
-]
+];
 
 export default function LanguesPage() {
   return (
@@ -28,5 +28,5 @@ export default function LanguesPage() {
       <Slogan />
       <CategoryGrid items={languesSubcategories} />
     </main>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 import Image from "next/image";
-import styles from "./Article.module.scss";
+import styles from "./Intro.module.scss";
 
-export default async function Article() {
+export default async function Intro() {
   return (
     <div className={styles.component}>
       {/* Intro */}

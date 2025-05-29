@@ -1,21 +1,21 @@
-import Article from "../components/article/Article"
-import CardGrid from "../components/cardGrid/CardGrid"
-import FAQ from "../components/faq/FAQ"
-import HeroSection from "../components/heroSection/HeroSection"
-import Rectangle from "../components/rectangle/Rectangle"
-import RectangleCeo from "../components/rectangleCeo/RectangleCeo"
-import User from "../components/user/User"
+import CardGrid from "../components/cardGrid/CardGrid";
+import FAQ from "../components/faq/FAQ";
+import HeroSection from "../components/heroSection/HeroSection";
+import User from "../components/user/User";
+import CommunityBanner from "../components/communityBanner/CommunityBanner";
+import ExchangeBanner from "../components/exchangeBanner/ExchangeBanner";
+import Intro from "../components/intro/Intro";
 
 export default async function Home() {
   return (
     <>
       <HeroSection />
-      <Article />
+      <Intro />
       <CardGrid />
-      <Rectangle />
+      <ExchangeBanner />
       <User />
-      <RectangleCeo />
+      <CommunityBanner />
       <FAQ />
     </>
-  )
+  );
 }

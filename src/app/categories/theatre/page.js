@@ -1,16 +1,16 @@
-import CategoryGrid from '../../../components/categoryGrid/CategoryGrid'
-import Banner from '../../../components/banner/Banner'
-import Slogan from '../../../components/slogan/Slogan'
-import bannerStyles from '../../../components/banner/Banner.module.scss'
-import styles from "../../skills/skills.module.scss"
+import CategoryGrid from "../../../components/categoryGrid/CategoryGrid";
+import Banner from "../../../components/banner/Banner";
+import Slogan from "../../../components/slogan/Slogan";
+import bannerStyles from "../../../components/banner/Banner.module.scss";
+import styles from "../../skills-list/skills.module.scss";
 
 const theatreSubcategories = [
   {
-    title: 'Improvisation',
-    image: '/assets/impro.jpg',
-    href: '/competence/improvisation',
+    title: "Improvisation",
+    image: "/assets/impro.jpg",
+    href: "/competence/improvisation",
   },
-]
+];
 
 export default function TheatrePage() {
   return (
@@ -23,5 +23,5 @@ export default function TheatrePage() {
       <Slogan />
       <CategoryGrid items={theatreSubcategories} />
     </main>
-  )
+  );
 }

@@ -1,26 +1,26 @@
-import CategoryGrid from '../../../components/categoryGrid/CategoryGrid'
-import Banner from '../../../components/banner/Banner'
-import Slogan from '../../../components/slogan/Slogan'
-import bannerStyles from '../../../components/banner/Banner.module.scss'
-import styles from "../../skills/skills.module.scss"
+import CategoryGrid from "../../../components/categoryGrid/CategoryGrid";
+import Banner from "../../../components/banner/Banner";
+import Slogan from "../../../components/slogan/Slogan";
+import bannerStyles from "../../../components/banner/Banner.module.scss";
+import styles from "../../skills-list/skills.module.scss";
 
 const sportSubcategories = [
   {
-    title: 'Judo',
-    image: '/assets/judo.jpg',
-    href: '/competence/judo',
+    title: "Judo",
+    image: "/assets/judo.jpg",
+    href: "/competence/judo",
   },
   {
-    title: 'Football',
-    image: '/assets/football.jpg',
-    href: '/competence/football',
+    title: "Football",
+    image: "/assets/football.jpg",
+    href: "/competence/football",
   },
   {
-    title: 'Tennis',
-    image: '/assets/tennis.jpg',
-    href: '/competence/tennis',
+    title: "Tennis",
+    image: "/assets/tennis.jpg",
+    href: "/competence/tennis",
   },
-]
+];
 
 export default function SportPage() {
   return (
@@ -33,5 +33,5 @@ export default function SportPage() {
       <Slogan />
       <CategoryGrid items={sportSubcategories} />
     </main>
-  )
+  );
 }
