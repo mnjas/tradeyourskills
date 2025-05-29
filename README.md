@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛠️ Trade Your Skills
 
-## Getting Started
+**Trade Your Skills** est une plateforme d’échange de compétences entre particuliers. Elle permet à chaque utilisateur d’enseigner ce qu’il maîtrise et d’apprendre gratuitement d’autres compétences en retour.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Sommaire
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [1. Contexte du projet](#1-contexte-du-projet)
+- [2. Architecture technique](#2-architecture-technique)
+- [3. Stack technologique](#3-stack-technologique)
+- [4. Sécurité](#4-sécurité)
+- [5. Tests](#5-tests)
+- [6. Déploiement](#6-déploiement)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 1. Contexte du projet
 
-## Learn More
+Dans un monde où la formation est souvent coûteuse, **Trade Your Skills** vise à créer une alternative solidaire et gratuite : permettre aux individus d’échanger du temps et des compétences, sans transaction monétaire.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 2. Architecture technique
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Frontend** SSR via Next.js 14 (App Router)
+- **Backend** Express/Node.js avec API REST
+- **Database** MySQL, hébergée sur Railway
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 3. Stack technologique
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Composant        | Technologie      | Justification                                |
+|------------------|------------------|----------------------------------------------|
+| Frontend         | Next.js 14       | SEO, SSR, routing intégré, rapide            |
+| Backend          | Node.js + Express| Léger, rapide, facile à développer           |
+| BDD              | MySQL            | Relationnelle, robuste, adaptée aux besoins  |
+| Hébergement front| Vercel           | Déploiement automatique, CI/CD intégré       |
+| Hébergement back | Railway          | Facile, scalable, gratuit                    |
+| Authentification | JWT              | Sécurisé et stateless                        |
+
+---
+
+## 4. Sécurité
+
+- Authentification par JWT
+- Mots de passe hachés avec `bcrypt`
+- Protection contre injection SQL (requêtes préparées)
+- Vérifications d’entrée sur les formulaires
+- CORS configuré
+
+---
+
+## 5. Tests
+
+| Type de test       | Détail                                |
+|--------------------|----------------------------------------|
+| Tests manuels      | Sur le parcours utilisateur complet    |
+| Tests API          | Via Postman                           |
+| Tests fonctionnels | Vérifications de formulaire et routes |
+
+---
+
+## 6. Déploiement
+
+| Partie      | Plateforme | Détails                         |
+|-------------|------------|----------------------------------|
+| Frontend    | Vercel     | Déploiement continu via GitHub  |
+| Backend     | Railway    | Hébergement + base MySQL        |
+| Base de données | Railway| Persistante, privée             |
+
+---
