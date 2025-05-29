@@ -6,6 +6,11 @@
   padding: 0 20px;
   margin-top: 50px;
 
+  @include tablet {
+    padding: 0 15px;
+    margin-top: 40px;
+  }
+
   @include mobile {
     padding: 0 7px;
   }
@@ -15,6 +20,11 @@
   display: flex;
   gap: 20px;
   width: 100%;
+
+  @include tablet {
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 }
 
 .banner {
@@ -33,7 +43,7 @@
   }
 
   @include mobile {
-    height: 200px;
+    height: 150px;
   }
 
   img {
@@ -42,6 +52,7 @@
     object-fit: cover;
     display: block;
   }
+
   .titleWrapper {
     position: absolute;
     top: 50%;
@@ -56,11 +67,18 @@
     text-align: center;
     max-width: 90%;
     width: max-content;
-  
+
+    @include tablet {
+      border: 12px solid #fff;
+      padding: 20px 25px;
+      max-width: 70%;
+    }
+
     @include mobile {
+      top: 40%;
       border: 8px solid #fff;
-      padding: 15px 20px;
-      width: 70%;
+      padding: 10px 15px;
+      width: 50%;
     }
   }
 
@@ -71,9 +89,13 @@
     font-weight: bold;
     margin: 0;
     font-family: "BigJohn";
-  
+
+    @include tablet {
+      font-size: 40px;
+    }
+
     @include mobile {
-      font-size: 20px;
+      font-size: 18px;
     }
   }
 }
@@ -102,9 +124,15 @@
     margin: 0 auto 10px auto;
   }
 
+  @include tablet {
+    font-size: 14px;
+    top: 88%;
+    width: 70%;
+  }
+
   @include mobile {
     font-size: 12px;
-    top: 83%;
+    top: 85%;
   }
 }
 
@@ -119,6 +147,12 @@
     line-height: 28px;
     margin: 25px 0 5px 0;
 
+    @include tablet {
+      font-size: 22px;
+      line-height: 26px;
+      margin: 20px 0 5px 0;
+    }
+
     @include mobile {
       font-size: 21px;
       line-height: 22px;
@@ -126,53 +160,63 @@
     }
   }
 
-
-.content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-family: Lato, sans-serif !important;
-  line-height: 1.4;
-  margin: 0 0 30px 0;
-  max-width: 100%;
-  gap: 50px;
-
-  p,
-  ul,
-  ol {
-    color: #292b2c;
-    font-size: 1.313em;
-    margin: 5px 0 15px 0;
-
-    @include mobile {
-      font-size: 16px;
-    }
-  }
-
-  picture {
-    display: block;
-    margin: 20px 0;
-  }
-
-  img {
-    display: block;
-    margin: 0 auto;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Lato, sans-serif !important;
+    line-height: 1.4;
+    margin: 0 0 30px 0;
     max-width: 100%;
-    height: auto;
+    gap: 50px;
+
+    p,
+    ul,
+    ol {
+      color: #292b2c;
+      font-size: 1.313em;
+      margin: 5px 0 15px 0;
+
+      @include tablet {
+        font-size: 1.1em;
+      }
+
+      @include mobile {
+        font-size: 16px;
+      }
+    }
+
+    picture {
+      display: block;
+      margin: 20px 0;
+    }
+
+    img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+
+      @include tablet {
+        width: 70%;
+      }
+
+      @include mobile {
+        width: 50%;
+      }
+    }
+
+    @include tablet {
+      gap: 30px;
+    }
 
     @include mobile {
-      width: 50%;
+      flex-direction: column-reverse;
+      text-align: center;
+
+      p {
+        margin-top: 20px;
+      }
     }
   }
-
-  @include mobile {
-    flex-direction: column-reverse;
-    text-align: center;
-
-    p {
-      margin-top: 20px;
-    }
-  }
-}
-
 }

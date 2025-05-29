@@ -53,6 +53,40 @@
     }
   }
 
+  @include tablet {
+    padding: 0 15px;
+
+    .imageContainer {
+      justify-content: center;
+
+      img {
+        width: 60%;
+      }
+    }
+
+    .textContainer {
+      padding-top: 15px;
+
+      .title {
+        font-size: 1.7rem;
+      }
+
+      .subtitle {
+        font-size: 1.1rem;
+      }
+
+      .searchBar {
+        max-width: 350px;
+        height: 36px;
+
+        input {
+          font-size: 0.9rem;
+          padding: 0 0.4rem;
+        }
+      }
+    }
+  }
+
   @include mobile {
     flex-direction: column;
     align-items: center;
