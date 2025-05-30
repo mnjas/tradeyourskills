@@ -1,7 +1,7 @@
-"use client"
-import Link from 'next/link'
-import styles from "../../styles/auth.module.scss"
-import button from '../../styles/buttons.module.scss'
+"use client";
+import Link from "next/link";
+import styles from "../../styles/auth.module.scss";
+import button from "../../styles/buttons.module.scss";
 
 export default function Form({
   title,
@@ -23,7 +23,7 @@ export default function Form({
   description,
   setDescription,
   error,
-  submitLabel
+  submitLabel,
 }) {
   return (
     <div className={styles.formContainer}>
@@ -33,7 +33,7 @@ export default function Form({
           <div className={styles.inputGroup}>
             <input
               type="text"
-              placeholder="Nom"
+              placeholder="Prénom"
               value={name}
               onChange={(e) => setName(e.target.value)}
               required
@@ -143,7 +143,9 @@ export default function Form({
               onChange={(e) => setInterest(e.target.value)}
               required
             >
-              <option value="">Sélectionner une compétence d&rsquo;intérêt</option>
+              <option value="">
+                Sélectionner une compétence d&rsquo;intérêt
+              </option>
               <option value="guitare">Guitare</option>
               <option value="piano">Piano</option>
               <option value="batterie">Batterie</option>
@@ -202,7 +204,7 @@ export default function Form({
         </button>
 
         {!setName && (
-          <div style={{ marginTop: '20px', textAlign: 'center' }}>
+          <div style={{ marginTop: "20px", textAlign: "center" }}>
             <p>Pas encore de compte ?</p>
             <Link href="/register" className={button.authButton}>
               S&rsquo;inscrire
@@ -211,5 +213,5 @@ export default function Form({
         )}
       </form>
     </div>
-  )
+  );
 }
