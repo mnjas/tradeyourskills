@@ -2,6 +2,13 @@
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
 import styles from "../userProfile.module.scss";
+import { Phone, Star, MapPin, Mail, Info } from "lucide-react";
+
+const InfoItem = ({ icon: Icon, label }) => (
+  <p className={styles.infoItem}>
+    <Icon size={16} /> {label}
+  </p>
+);
 
 export default function UserPage() {
   const { id } = useParams();
@@ -20,8 +27,6 @@ export default function UserPage() {
       .then((data) => setUser(data));
   }, [id]);
 
-  if (!user) return <div>Chargement...</div>;
-
   const sendEmail = async (e) => {
     e.preventDefault();
     setIsSending(true);
@@ -35,7 +40,7 @@ export default function UserPage() {
         body: JSON.stringify({
           to: user.email,
           subject: `Demande de RDV le ${date}`,
-          text: `Bonjour ${user.name},\n\nUne personne souhaite prendre rendez-vous avec vous le ${date}.\n\nMessage :\n${message}\n\nCordialement.`,
+          text: `Bonjour ${user.name},\n\nUne personne souhaite prendre rendez-vous avec vous le ${date}.\n\nMessage :\n${message}\n\nBien cordialement.`,
         }),
       });
 
@@ -52,6 +57,8 @@ export default function UserPage() {
       setIsSending(false);
     }
   };
+
+  if (!user) return <div>Chargement...</div>;
 
   return (
     <div className={styles.container}>
@@ -121,21 +128,11 @@ export default function UserPage() {
       <div className={styles.infoBox}>
         <h2>{user.name}</h2>
         <hr />
-        <p>
-          <strong>Compétence :</strong> {user.skill}
-        </p>
-        <p>
-          <strong>Téléphone :</strong> {user.phone || "Non renseigné"}
-        </p>
-        <p>
-          <strong>Email :</strong> {user.email}
-        </p>
-        <p>
-          <strong>Ville :</strong> {user.city || "Non renseignée"}
-        </p>
-        <p>
-          <strong>Description :</strong> {user.description || "Non renseignée"}
-        </p>
+        <InfoItem icon={Star} label={user.skill} />
+        <InfoItem icon={Phone} label={user.phone || "Non renseigné"} />
+        <InfoItem icon={Mail} label={user.email} />
+        <InfoItem icon={MapPin} label={user.city || "Non renseignée"} />
+        <InfoItem icon={Info} label={user.description || "Non renseignée"} />
 
         <a href={`mailto:${user.email}`} className={styles.contactButton}>
           Contacter
